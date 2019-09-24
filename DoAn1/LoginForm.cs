@@ -30,6 +30,7 @@ namespace DoAn1
         //}
         private void ButtonLOGIN_Click(object sender, EventArgs e)
         {
+            StaticValue.ID = txtTaiKhoan.Text;
             MyDB con = new MyDB();
             con.openConnection();
             string tk = txtTaiKhoan.Text;

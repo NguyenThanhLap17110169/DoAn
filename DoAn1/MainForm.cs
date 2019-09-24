@@ -18,25 +18,59 @@ namespace DoAn1
         {
             InitializeComponent();
         }
-
-        private void Btncongnhan_Click(object sender, EventArgs e)
+        private void HệThốngSảnXuấtToolStripMenuItem_Click(object sender, EventArgs e)
         {
-           
-            CongNhanForm cn = new CongNhanForm();
-            cn.getdata();
-            cn.Refresh1();
-            cn.ShowDialog();
+            HeThongSanXuatForm ht = new HeThongSanXuatForm();
+            // ht.getdata();
+            ht.ShowDialog();
         }
 
-        private void Btnkysu_Click(object sender, EventArgs e)
+        private void LươngToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            SalaryForm s = new SalaryForm();
+            s.ShowDialog();
+        }
+
+        private void ThoátToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+            getImageandUsername();
+        }
+        public void getImageandUsername()
+        {
+
+            MyDB mydb = new MyDB();
+            SqlDataAdapter adapter = new SqlDataAdapter();
+            DataTable table = new DataTable();
+            SqlCommand command = new SqlCommand("Select * FROM KySu where MaKS=@id", mydb.getConnection);
+            command.Parameters.Add("@id", SqlDbType.VarChar).Value = StaticValue.ID;
+            adapter.SelectCommand = command;
+            adapter.Fill(table);
+            if (table.Rows.Count > 0)
+            {
+                byte[] pic = (byte[])table.Rows[0]["HinhAnh"];
+                MemoryStream picture = new MemoryStream(pic);
+                pictureBox1.Image = Image.FromStream(picture);
+                labelInformation.Text = ("Welcome " + table.Rows[0]["HoTen"]);
+                label2.Text = ("Chuc vu: " + table.Rows[0]["ChucVu"]);
+            }
+
+        }
+
+        private void KỹSưToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+
             KySuForm ks = new KySuForm();
             ks.getdata();
             ks.Refresh1();
             ks.ShowDialog();
         }
 
-        private void Btnnhanvien_Click(object sender, EventArgs e)
+        private void NhânViênToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             NhanVienForm nv = new NhanVienForm();
             nv.getdata();
@@ -44,17 +78,12 @@ namespace DoAn1
             nv.ShowDialog();
         }
 
-        private void Btnhethong_Click(object sender, EventArgs e)
+        private void CôngNhânToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            HeThongSanXuatForm ht = new HeThongSanXuatForm();
-           // ht.getdata();
-            ht.ShowDialog();
-        }
-
-        private void Btnluong_Click(object sender, EventArgs e)
-        {
-            SalaryForm s = new SalaryForm();
-            s.ShowDialog();
+            CongNhanForm cn = new CongNhanForm();
+            cn.getdata();
+            cn.Refresh1();
+            cn.ShowDialog();
         }
     }
 }

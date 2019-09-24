@@ -118,6 +118,12 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="nghe-thuat-quan-ly-nhan-su1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\nghe-thuat-quan-ly-nhan-su1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="1422738518_44994" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1422738518_44994.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="1422740211_37044" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\1422740211_37044.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -126,6 +132,12 @@
   </data>
   <data name="Custom-Icon-Design-Pretty-Office-9-Edit-validated" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Custom-Icon-Design-Pretty-Office-9-Edit-validated.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Phan_Mem_Quan_Ly_Nhan_Su2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Phan_Mem_Quan_Ly_Nhan_Su2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Dich-vu-tham-tu-tu-tim-kiem" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Dich-vu-tham-tu-tu-tim-kiem.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Icojam-Blue-Bits-User-add" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Icojam-Blue-Bits-User-add.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -142,8 +154,17 @@
   <data name="Awicons-Vista-Artistic-Search1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Awicons-Vista-Artistic-Search1.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Phan_Mem_Quan_Ly_Nhan_Su21" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Phan_Mem_Quan_Ly_Nhan_Su21.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Custom-Icon-Design-Flatastic-4-Male-user-remove" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Custom-Icon-Design-Flatastic-4-Male-user-remove.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="kisspng_human_resource_management_system_computer_software_5b3ad98d17af69_927909431530583437097" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\kisspng-human-resource-management-system-computer-software-5b3ad98d17af69.927909431530583437097.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Remote-team-management-tips-400x248" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Remote-team-management-tips-400x248.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Custom-Icon-Design-Flatastic-9-Start" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Custom-Icon-Design-Flatastic-9-Start.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -157,10 +178,7 @@
   <data name="Awicons-Vista-Artistic-Search" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Awicons-Vista-Artistic-Search.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Dich-vu-tham-tu-tu-tim-kiem" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Dich-vu-tham-tu-tu-tim-kiem.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="1422738518_44994" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\1422738518_44994.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="hinh-nen-powerpoint-xanh-duong-cuc-dep_0123240531" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\hinh-nen-powerpoint-xanh-duong-cuc-dep_0123240531.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

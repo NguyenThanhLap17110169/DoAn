@@ -33,30 +33,22 @@
             this.textBoxSearch = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.buttonLamMoi = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
             this.buttonDownloadImage = new System.Windows.Forms.Button();
             this.ButtonUploadImage = new System.Windows.Forms.Button();
-            this.pictureBoxCongNhanImage = new System.Windows.Forms.PictureBox();
             this.DataGridView1 = new System.Windows.Forms.DataGridView();
-            this.buttonThoat = new System.Windows.Forms.Button();
-            this.buttonThem = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.txtDCtamtru = new System.Windows.Forms.TextBox();
             this.label19 = new System.Windows.Forms.Label();
             this.radioButtonFemale = new System.Windows.Forms.RadioButton();
             this.radioButtonMale = new System.Windows.Forms.RadioButton();
-            this.buttonXoa = new System.Windows.Forms.Button();
             this.txtTenCN = new System.Windows.Forms.TextBox();
             this.label25 = new System.Windows.Forms.Label();
             this.dateTimeNgaysinh = new System.Windows.Forms.DateTimePicker();
             this.label13 = new System.Windows.Forms.Label();
-            this.buttonInFile = new System.Windows.Forms.Button();
             this.label30 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
-            this.buttonSua = new System.Windows.Forms.Button();
-            this.buttonDatLai = new System.Windows.Forms.Button();
             this.label24 = new System.Windows.Forms.Label();
             this.txtSDT = new System.Windows.Forms.TextBox();
             this.ComboBoxTrinhDo = new System.Windows.Forms.ComboBox();
@@ -75,9 +67,17 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.buttonSearch = new System.Windows.Forms.Button();
+            this.buttonLamMoi = new System.Windows.Forms.Button();
+            this.pictureBoxCongNhanImage = new System.Windows.Forms.PictureBox();
+            this.buttonThoat = new System.Windows.Forms.Button();
+            this.buttonThem = new System.Windows.Forms.Button();
+            this.buttonXoa = new System.Windows.Forms.Button();
+            this.buttonInFile = new System.Windows.Forms.Button();
+            this.buttonSua = new System.Windows.Forms.Button();
+            this.buttonDatLai = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCongNhanImage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCongNhanImage)).BeginInit();
             this.SuspendLayout();
             // 
             // label9
@@ -100,7 +100,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.BackColor = System.Drawing.SystemColors.Menu;
+            this.groupBox1.BackColor = System.Drawing.Color.LightBlue;
             this.groupBox1.Controls.Add(this.label11);
             this.groupBox1.Controls.Add(this.buttonLamMoi);
             this.groupBox1.Controls.Add(this.label10);
@@ -160,17 +160,6 @@
             this.label11.TabIndex = 200;
             this.label11.Text = "Làm mới";
             // 
-            // buttonLamMoi
-            // 
-            this.buttonLamMoi.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.buttonLamMoi.Image = global::DoAn1.Properties.Resources.Hopstarter_Soft_Scraps_Button_Refresh1;
-            this.buttonLamMoi.Location = new System.Drawing.Point(872, 235);
-            this.buttonLamMoi.Name = "buttonLamMoi";
-            this.buttonLamMoi.Size = new System.Drawing.Size(43, 40);
-            this.buttonLamMoi.TabIndex = 199;
-            this.buttonLamMoi.UseVisualStyleBackColor = true;
-            this.buttonLamMoi.Click += new System.EventHandler(this.buttonLamMoi_Click);
-            // 
             // label10
             // 
             this.label10.AutoSize = true;
@@ -204,18 +193,6 @@
             this.ButtonUploadImage.UseVisualStyleBackColor = true;
             this.ButtonUploadImage.Click += new System.EventHandler(this.ButtonUploadImage_Click);
             // 
-            // pictureBoxCongNhanImage
-            // 
-            this.pictureBoxCongNhanImage.BackColor = System.Drawing.Color.PaleTurquoise;
-            this.pictureBoxCongNhanImage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBoxCongNhanImage.Location = new System.Drawing.Point(833, 117);
-            this.pictureBoxCongNhanImage.Margin = new System.Windows.Forms.Padding(5);
-            this.pictureBoxCongNhanImage.Name = "pictureBoxCongNhanImage";
-            this.pictureBoxCongNhanImage.Size = new System.Drawing.Size(176, 73);
-            this.pictureBoxCongNhanImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBoxCongNhanImage.TabIndex = 195;
-            this.pictureBoxCongNhanImage.TabStop = false;
-            // 
             // DataGridView1
             // 
             this.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -224,29 +201,6 @@
             this.DataGridView1.Size = new System.Drawing.Size(988, 254);
             this.DataGridView1.TabIndex = 193;
             this.DataGridView1.DoubleClick += new System.EventHandler(this.DataGridView1_DoubleClick);
-            // 
-            // buttonThoat
-            // 
-            this.buttonThoat.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.buttonThoat.Image = global::DoAn1.Properties.Resources.Awicons_Vista_Artistic_Delete;
-            this.buttonThoat.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.buttonThoat.Location = new System.Drawing.Point(813, 297);
-            this.buttonThoat.Name = "buttonThoat";
-            this.buttonThoat.Size = new System.Drawing.Size(43, 40);
-            this.buttonThoat.TabIndex = 192;
-            this.buttonThoat.UseVisualStyleBackColor = true;
-            this.buttonThoat.Click += new System.EventHandler(this.ButtonThoat_Click);
-            // 
-            // buttonThem
-            // 
-            this.buttonThem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.buttonThem.Image = global::DoAn1.Properties.Resources.Icojam_Blue_Bits_User_add;
-            this.buttonThem.Location = new System.Drawing.Point(530, 234);
-            this.buttonThem.Name = "buttonThem";
-            this.buttonThem.Size = new System.Drawing.Size(43, 40);
-            this.buttonThem.TabIndex = 191;
-            this.buttonThem.UseVisualStyleBackColor = true;
-            this.buttonThem.Click += new System.EventHandler(this.ButtonThem_Click);
             // 
             // label8
             // 
@@ -300,18 +254,6 @@
             this.radioButtonMale.Text = "Nam";
             this.radioButtonMale.UseVisualStyleBackColor = true;
             // 
-            // buttonXoa
-            // 
-            this.buttonXoa.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.buttonXoa.Image = global::DoAn1.Properties.Resources.Custom_Icon_Design_Flatastic_4_Male_user_remove;
-            this.buttonXoa.Location = new System.Drawing.Point(755, 234);
-            this.buttonXoa.Margin = new System.Windows.Forms.Padding(2);
-            this.buttonXoa.Name = "buttonXoa";
-            this.buttonXoa.Size = new System.Drawing.Size(44, 41);
-            this.buttonXoa.TabIndex = 55;
-            this.buttonXoa.UseVisualStyleBackColor = true;
-            this.buttonXoa.Click += new System.EventHandler(this.ButtonXoa_Click);
-            // 
             // txtTenCN
             // 
             this.txtTenCN.Location = new System.Drawing.Point(166, 76);
@@ -348,18 +290,6 @@
             this.label13.TabIndex = 68;
             this.label13.Text = "In File";
             // 
-            // buttonInFile
-            // 
-            this.buttonInFile.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonInFile.BackgroundImage")));
-            this.buttonInFile.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.buttonInFile.Image = global::DoAn1.Properties.Resources.Iconshow_Hardware_Printer;
-            this.buttonInFile.Location = new System.Drawing.Point(706, 297);
-            this.buttonInFile.Name = "buttonInFile";
-            this.buttonInFile.Size = new System.Drawing.Size(43, 40);
-            this.buttonInFile.TabIndex = 67;
-            this.buttonInFile.UseVisualStyleBackColor = true;
-            this.buttonInFile.Click += new System.EventHandler(this.ButtonInFile_Click);
-            // 
             // label30
             // 
             this.label30.AutoSize = true;
@@ -386,28 +316,6 @@
             this.label26.Size = new System.Drawing.Size(36, 19);
             this.label26.TabIndex = 55;
             this.label26.Text = "Sửa";
-            // 
-            // buttonSua
-            // 
-            this.buttonSua.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.buttonSua.Image = global::DoAn1.Properties.Resources.Custom_Icon_Design_Pretty_Office_9_Edit_validated;
-            this.buttonSua.Location = new System.Drawing.Point(645, 235);
-            this.buttonSua.Name = "buttonSua";
-            this.buttonSua.Size = new System.Drawing.Size(43, 40);
-            this.buttonSua.TabIndex = 50;
-            this.buttonSua.UseVisualStyleBackColor = true;
-            this.buttonSua.Click += new System.EventHandler(this.ButtonSua_Click);
-            // 
-            // buttonDatLai
-            // 
-            this.buttonDatLai.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.buttonDatLai.Image = global::DoAn1.Properties.Resources.Custom_Icon_Design_Flatastic_9_Start;
-            this.buttonDatLai.Location = new System.Drawing.Point(588, 297);
-            this.buttonDatLai.Name = "buttonDatLai";
-            this.buttonDatLai.Size = new System.Drawing.Size(43, 40);
-            this.buttonDatLai.TabIndex = 49;
-            this.buttonDatLai.UseVisualStyleBackColor = true;
-            this.buttonDatLai.Click += new System.EventHandler(this.ButtonDatLai_Click);
             // 
             // label24
             // 
@@ -585,10 +493,103 @@
             this.buttonSearch.UseVisualStyleBackColor = false;
             this.buttonSearch.Click += new System.EventHandler(this.ButtonSearch_Click);
             // 
+            // buttonLamMoi
+            // 
+            this.buttonLamMoi.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonLamMoi.Image = global::DoAn1.Properties.Resources.Hopstarter_Soft_Scraps_Button_Refresh1;
+            this.buttonLamMoi.Location = new System.Drawing.Point(872, 235);
+            this.buttonLamMoi.Name = "buttonLamMoi";
+            this.buttonLamMoi.Size = new System.Drawing.Size(43, 40);
+            this.buttonLamMoi.TabIndex = 199;
+            this.buttonLamMoi.UseVisualStyleBackColor = true;
+            this.buttonLamMoi.Click += new System.EventHandler(this.buttonLamMoi_Click);
+            // 
+            // pictureBoxCongNhanImage
+            // 
+            this.pictureBoxCongNhanImage.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.pictureBoxCongNhanImage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBoxCongNhanImage.Location = new System.Drawing.Point(833, 117);
+            this.pictureBoxCongNhanImage.Margin = new System.Windows.Forms.Padding(5);
+            this.pictureBoxCongNhanImage.Name = "pictureBoxCongNhanImage";
+            this.pictureBoxCongNhanImage.Size = new System.Drawing.Size(176, 73);
+            this.pictureBoxCongNhanImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxCongNhanImage.TabIndex = 195;
+            this.pictureBoxCongNhanImage.TabStop = false;
+            // 
+            // buttonThoat
+            // 
+            this.buttonThoat.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonThoat.Image = global::DoAn1.Properties.Resources.Awicons_Vista_Artistic_Delete;
+            this.buttonThoat.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.buttonThoat.Location = new System.Drawing.Point(813, 297);
+            this.buttonThoat.Name = "buttonThoat";
+            this.buttonThoat.Size = new System.Drawing.Size(43, 40);
+            this.buttonThoat.TabIndex = 192;
+            this.buttonThoat.UseVisualStyleBackColor = true;
+            this.buttonThoat.Click += new System.EventHandler(this.ButtonThoat_Click);
+            // 
+            // buttonThem
+            // 
+            this.buttonThem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.buttonThem.Image = global::DoAn1.Properties.Resources.Icojam_Blue_Bits_User_add;
+            this.buttonThem.Location = new System.Drawing.Point(530, 234);
+            this.buttonThem.Name = "buttonThem";
+            this.buttonThem.Size = new System.Drawing.Size(43, 40);
+            this.buttonThem.TabIndex = 191;
+            this.buttonThem.UseVisualStyleBackColor = true;
+            this.buttonThem.Click += new System.EventHandler(this.ButtonThem_Click);
+            // 
+            // buttonXoa
+            // 
+            this.buttonXoa.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.buttonXoa.Image = global::DoAn1.Properties.Resources.Custom_Icon_Design_Flatastic_4_Male_user_remove;
+            this.buttonXoa.Location = new System.Drawing.Point(755, 234);
+            this.buttonXoa.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonXoa.Name = "buttonXoa";
+            this.buttonXoa.Size = new System.Drawing.Size(44, 41);
+            this.buttonXoa.TabIndex = 55;
+            this.buttonXoa.UseVisualStyleBackColor = true;
+            this.buttonXoa.Click += new System.EventHandler(this.ButtonXoa_Click);
+            // 
+            // buttonInFile
+            // 
+            this.buttonInFile.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonInFile.BackgroundImage")));
+            this.buttonInFile.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonInFile.Image = global::DoAn1.Properties.Resources.Iconshow_Hardware_Printer;
+            this.buttonInFile.Location = new System.Drawing.Point(706, 297);
+            this.buttonInFile.Name = "buttonInFile";
+            this.buttonInFile.Size = new System.Drawing.Size(43, 40);
+            this.buttonInFile.TabIndex = 67;
+            this.buttonInFile.UseVisualStyleBackColor = true;
+            this.buttonInFile.Click += new System.EventHandler(this.ButtonInFile_Click);
+            // 
+            // buttonSua
+            // 
+            this.buttonSua.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonSua.Image = global::DoAn1.Properties.Resources.Custom_Icon_Design_Pretty_Office_9_Edit_validated;
+            this.buttonSua.Location = new System.Drawing.Point(645, 235);
+            this.buttonSua.Name = "buttonSua";
+            this.buttonSua.Size = new System.Drawing.Size(43, 40);
+            this.buttonSua.TabIndex = 50;
+            this.buttonSua.UseVisualStyleBackColor = true;
+            this.buttonSua.Click += new System.EventHandler(this.ButtonSua_Click);
+            // 
+            // buttonDatLai
+            // 
+            this.buttonDatLai.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonDatLai.Image = global::DoAn1.Properties.Resources.Custom_Icon_Design_Flatastic_9_Start;
+            this.buttonDatLai.Location = new System.Drawing.Point(588, 297);
+            this.buttonDatLai.Name = "buttonDatLai";
+            this.buttonDatLai.Size = new System.Drawing.Size(43, 40);
+            this.buttonDatLai.TabIndex = 49;
+            this.buttonDatLai.UseVisualStyleBackColor = true;
+            this.buttonDatLai.Click += new System.EventHandler(this.ButtonDatLai_Click);
+            // 
             // CongNhanForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.SkyBlue;
             this.ClientSize = new System.Drawing.Size(1048, 733);
             this.Controls.Add(this.buttonSearch);
             this.Controls.Add(this.label9);
@@ -598,8 +599,8 @@
             this.Text = "CongNhanForm";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCongNhanImage)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCongNhanImage)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

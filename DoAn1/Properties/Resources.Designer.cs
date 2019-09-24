@@ -163,6 +163,16 @@ namespace DoAn1.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap hinh_nen_powerpoint_xanh_duong_cuc_dep_0123240531 {
+            get {
+                object obj = ResourceManager.GetObject("hinh-nen-powerpoint-xanh-duong-cuc-dep_0123240531", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Hopstarter_Soft_Scraps_Button_Refresh {
             get {
                 object obj = ResourceManager.GetObject("Hopstarter-Soft-Scraps-Button-Refresh", resourceCulture);
@@ -196,6 +206,57 @@ namespace DoAn1.Properties {
         internal static System.Drawing.Bitmap Iconshow_Hardware_Printer {
             get {
                 object obj = ResourceManager.GetObject("Iconshow-Hardware-Printer", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap kisspng_human_resource_management_system_computer_software_5b3ad98d17af69_927909431530583437097 {
+            get {
+                object obj = ResourceManager.GetObject("kisspng_human_resource_management_system_computer_software_5b3ad98d17af69_9279094" +
+                        "31530583437097", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap nghe_thuat_quan_ly_nhan_su1 {
+            get {
+                object obj = ResourceManager.GetObject("nghe-thuat-quan-ly-nhan-su1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Phan_Mem_Quan_Ly_Nhan_Su2 {
+            get {
+                object obj = ResourceManager.GetObject("Phan_Mem_Quan_Ly_Nhan_Su2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Phan_Mem_Quan_Ly_Nhan_Su21 {
+            get {
+                object obj = ResourceManager.GetObject("Phan_Mem_Quan_Ly_Nhan_Su21", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Remote_team_management_tips_400x248 {
+            get {
+                object obj = ResourceManager.GetObject("Remote-team-management-tips-400x248", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

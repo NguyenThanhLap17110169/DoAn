@@ -52,9 +52,9 @@
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label7 = new System.Windows.Forms.Label();
             this.textBoxSearch = new System.Windows.Forms.TextBox();
             this.buttonSearch = new System.Windows.Forms.Button();
-            this.label7 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridView1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -342,6 +342,15 @@
             this.panel2.Size = new System.Drawing.Size(632, 53);
             this.panel2.TabIndex = 177;
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(3, 19);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(345, 19);
+            this.label7.TabIndex = 191;
+            this.label7.Text = "Tìm Kiếm Tên, Chức vụ, Bộ phận ( Phòng Ban, Nhóm)";
+            // 
             // textBoxSearch
             // 
             this.textBoxSearch.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -365,19 +374,11 @@
             this.buttonSearch.UseVisualStyleBackColor = false;
             this.buttonSearch.Click += new System.EventHandler(this.ButtonSearch_Click);
             // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(3, 19);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(345, 19);
-            this.label7.TabIndex = 191;
-            this.label7.Text = "Tìm Kiếm Tên, Chức vụ, Bộ phận ( Phòng Ban, Nhóm)";
-            // 
             // SalaryForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Aquamarine;
             this.ClientSize = new System.Drawing.Size(768, 587);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.radioButton3);

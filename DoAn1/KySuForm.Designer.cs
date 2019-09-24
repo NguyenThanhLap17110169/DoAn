@@ -385,7 +385,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.BackColor = System.Drawing.SystemColors.Menu;
+            this.groupBox1.BackColor = System.Drawing.Color.Turquoise;
             this.groupBox1.Controls.Add(this.label11);
             this.groupBox1.Controls.Add(this.buttonLamMoi);
             this.groupBox1.Controls.Add(this.label10);
@@ -591,6 +591,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.LightSeaGreen;
             this.ClientSize = new System.Drawing.Size(1047, 733);
             this.Controls.Add(this.textBoxSearch);
             this.Controls.Add(this.buttonSearch);

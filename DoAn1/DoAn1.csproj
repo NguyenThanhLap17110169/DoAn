@@ -132,6 +132,7 @@
       <DependentUpon>SalaryForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Nhom.cs" />
+    <Compile Include="StaticValue.cs" />
     <EmbeddedResource Include="CongNhanForm.resx">
       <DependentUpon>CongNhanForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -230,6 +231,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\1422738518_44994.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kisspng-human-resource-management-system-computer-software-5b3ad98d17af69.927909431530583437097.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Phan_Mem_Quan_Ly_Nhan_Su2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Remote-team-management-tips-400x248.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nghe-thuat-quan-ly-nhan-su1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Phan_Mem_Quan_Ly_Nhan_Su21.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hinh-nen-powerpoint-xanh-duong-cuc-dep_0123240531.jpeg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
