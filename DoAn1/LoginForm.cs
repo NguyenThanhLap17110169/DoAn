@@ -35,7 +35,7 @@ namespace DoAn1
             con.openConnection();
             string tk = txtTaiKhoan.Text;
             string mk = txtPassword.Text;
-            string sql = "select * from LogIn, KySu where LogIn.TaiKhoan='" + tk + "' and LogIn.MatKhau= '" + mk + "' and LogIn.TaiKhoan=KySu.MaKS and KySu.ChucVu = 'QuanLy'";
+            string sql = "select * from LogIn, KySu where LogIn.TaiKhoan='" + tk + "' and LogIn.MatKhau= '" + mk + "' and LogIn.TaiKhoan=KySu.MaKS and KySu.ChucVu = N'Quản Lý'";
             SqlCommand cmd = new SqlCommand(sql, con.getConnection);
             SqlDataReader dta = cmd.ExecuteReader();
 

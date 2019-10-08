@@ -79,10 +79,30 @@ namespace DoAn1
                 MessageBox.Show(ex.Message);
             }
         }
+        bool kiemtra(string ma)
+        {
+            MyDB mydb = new MyDB();
+            SqlCommand cmd = new SqlCommand("SELECT * FROM CongNhan WHERE MaCN = @ma ", mydb.getConnection);
+            cmd.Parameters.Add("@ma", SqlDbType.NVarChar).Value = ma;
+            string str = "SELECT  count (MaCN)  FROM CongNhan WHERE MaCN = '" + ma + "' ";
+            SqlCommand cmd1 = new SqlCommand(str, mydb.getConnection);
+
+            mydb.openConnection();
+            int n = (int)cmd1.ExecuteScalar();
+            mydb.closeConnection();
+            if (n >= 1)
+            {
+                return false;
+            }
+            else
+                return true;
+        }
         private void ButtonThem_Click(object sender, EventArgs e)
         {
             
             CongNhan congnhan = new CongNhan();
+            if (verif())
+            {
                 string ma = txtMaCN.Text;
                 int l = ma.Length;
                 string hoten = txtTenCN.Text;
@@ -103,16 +123,19 @@ namespace DoAn1
                 {
                     MessageBox.Show("The CongNhan Age Must Be Between 18 and 100 year", "Invalid Birth Date", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-                else if (l>2 && (ma[0].ToString() == "C" && ma[1].ToString() == "N") && verif())
+                else if (l > 2 && (ma[0].ToString() == "C" && ma[1].ToString() == "N")&& kiemtra(ma))
                 {
                     pictureBoxCongNhanImage.Image.Save(hinhanh, pictureBoxCongNhanImage.Image.RawFormat);
-                    if (congnhan.insertCongNhan(ma, hoten, ngaysinh, gioitinh, diachi, dienthoai, trinhdo,chucvu, bac, to, hinhanh))
+                    if (congnhan.insertCongNhan(ma, hoten, ngaysinh, gioitinh, diachi, dienthoai, trinhdo, chucvu, bac, to, hinhanh))
                         MessageBox.Show("New Công Nhân Added", "Add Công Nhân", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     else
                         MessageBox.Show("Error", "Add Công Nhân", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
                     MessageBox.Show("Empty Fields", "Add Công Nhân", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            else
+                MessageBox.Show("Empty Fields", "Add Công Nhân", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             getdata();
         }
         bool verif()
@@ -322,7 +345,7 @@ namespace DoAn1
         private void ButtonSearch_Click(object sender, EventArgs e)
         {
             MyDB mydb = new MyDB();
-            SqlCommand command = new SqlCommand("SELECT * FROM CongNhan WHERE CONCAT(HoTen,ChucVu,Nhom) LIKE'%" + textBoxSearch.Text + "%'", mydb.getConnection);
+            SqlCommand command = new SqlCommand("SELECT * FROM CongNhan WHERE CONCAT(HoTen,ChucVu,Nhom) LIKE N'%" + textBoxSearch.Text + "%'", mydb.getConnection);
             mydb.openConnection();
             DataTable table = new DataTable();
             table.Load(command.ExecuteReader());

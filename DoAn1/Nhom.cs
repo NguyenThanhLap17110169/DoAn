@@ -16,8 +16,8 @@ namespace DoAn1
             MyDB mydb = new MyDB();
             SqlCommand command = new SqlCommand("INSERT INTO Nhom (MaNhom, TenNhom) " +
                 "VALUES (@ma, @ten)", mydb.getConnection);
-            command.Parameters.Add("@ma", SqlDbType.VarChar).Value = manhom;
-            command.Parameters.Add("@ten", SqlDbType.VarChar).Value = tennhom;
+            command.Parameters.Add("@ma", SqlDbType.NVarChar).Value = manhom;
+            command.Parameters.Add("@ten", SqlDbType.NVarChar).Value = tennhom;
 
             mydb.openConnection();
 
@@ -36,7 +36,7 @@ namespace DoAn1
         {
             MyDB mydb = new MyDB();
             SqlCommand cmd = new SqlCommand("DELETE FROM Nhom WHERE MaNhom = @ma ", mydb.getConnection);
-            cmd.Parameters.Add("@ma", SqlDbType.VarChar).Value = ma;
+            cmd.Parameters.Add("@ma", SqlDbType.NVarChar).Value = ma;
             mydb.openConnection();
             if ((cmd.ExecuteNonQuery() == 1))
             {
@@ -55,8 +55,8 @@ namespace DoAn1
         {
             MyDB mydb = new MyDB();
             SqlCommand command = new SqlCommand("UPDATE Nhom SET MaNhom=@ma,TenNhom=@ten WHERE MaNhom=@ma", mydb.getConnection);
-            command.Parameters.Add("@ma", SqlDbType.VarChar).Value = manhom;
-            command.Parameters.Add("@ten", SqlDbType.VarChar).Value = tennhom;
+            command.Parameters.Add("@ma", SqlDbType.NVarChar).Value = manhom;
+            command.Parameters.Add("@ten", SqlDbType.NVarChar).Value = tennhom;
 
             mydb.openConnection();
             if ((command.ExecuteNonQuery() == 1))

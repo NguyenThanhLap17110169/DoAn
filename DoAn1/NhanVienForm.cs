@@ -79,36 +79,60 @@ namespace DoAn1
                 MessageBox.Show(ex.Message);
             }
         }
+        bool kiemtra(string ma)
+        {
+            MyDB mydb = new MyDB();
+            SqlCommand cmd = new SqlCommand("SELECT * FROM NhanVien WHERE MaNV = @ma ", mydb.getConnection);
+            cmd.Parameters.Add("@ma", SqlDbType.NVarChar).Value = ma;
+            string str = "SELECT  count (MaNV)  FROM NhanVien WHERE MaNV = '"+ma+"' ";
+            SqlCommand cmd1 = new SqlCommand(str, mydb.getConnection);
+
+            mydb.openConnection();
+            int n=(int) cmd1.ExecuteScalar();
+            mydb.closeConnection();
+            if (n >= 1)
+            {
+                return false;
+            }
+            else
+                return true;
+        }
         private void ButtonThem_Click(object sender, EventArgs e)
         {
             NhanVien nhanvien = new NhanVien();
-            string ma = txtMaNV.Text;
-            int l = ma.Length;
-            string hoten = txtTenNV.Text;
-            DateTime ngaysinh = dateTimeNgaysinh.Value;
-            string dienthoai = txtSDT.Text;
-            string diachi = txtDCtamtru.Text;
-            string chucvu = ComboBoxChucVu.Text;
-            string phongban = ComboBoxPhongBan.Text;
-            string trinhdo = ComboBoxTrinhDo.Text;
-            string congviec = ComboBoxCongViec.Text;
-            string gioitinh = "Nam";
-            if (radioButtonFemale.Checked)
-                gioitinh = "Nu";
-            MemoryStream hinhanh = new MemoryStream();
-            int born_year = dateTimeNgaysinh.Value.Year;
-            int this_year = DateTime.Now.Year;
-            if (((this_year - born_year) < 18) || ((this_year - born_year) > 100))
+            if (verif())
             {
-                MessageBox.Show("The NhanVien Age Must Be Between 18 and 100 year", "Invalid Birth Date", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            else if (l > 2 && (ma[0].ToString() == "N" && ma[1].ToString() == "V")  && verif())
-            {
-                pictureBoxNhanVienImage.Image.Save(hinhanh, pictureBoxNhanVienImage.Image.RawFormat);
-                if (nhanvien.insertNhanVien(ma, hoten, ngaysinh, gioitinh, diachi, dienthoai, trinhdo, chucvu, congviec, phongban, hinhanh))
-                    MessageBox.Show("New Nhân Viên Added", "Add Nhân Viên", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                string ma = txtMaNV.Text;
+                int l = ma.Length;
+                string hoten = txtTenNV.Text;
+                DateTime ngaysinh = dateTimeNgaysinh.Value;
+                string dienthoai = txtSDT.Text;
+                string diachi = txtDCtamtru.Text;
+                string chucvu = ComboBoxChucVu.Text;
+                string phongban = ComboBoxPhongBan.Text;
+                string trinhdo = ComboBoxTrinhDo.Text;
+                string congviec = ComboBoxCongViec.Text;
+                string gioitinh = "Nam";
+                if (radioButtonFemale.Checked)
+                    gioitinh = "Nu";
+                MemoryStream hinhanh = new MemoryStream();
+                int born_year = dateTimeNgaysinh.Value.Year;
+                int this_year = DateTime.Now.Year;
+
+                if (((this_year - born_year) < 18) || ((this_year - born_year) > 100))
+                {
+                    MessageBox.Show("The NhanVien Age Must Be Between 18 and 100 year", "Invalid Birth Date", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else if (l > 2 && (ma[0].ToString() == "N" && ma[1].ToString() == "V")&& kiemtra(ma))
+                {
+                    pictureBoxNhanVienImage.Image.Save(hinhanh, pictureBoxNhanVienImage.Image.RawFormat);
+                    if (nhanvien.insertNhanVien(ma, hoten, ngaysinh, gioitinh, diachi, dienthoai, trinhdo, chucvu, congviec, phongban, hinhanh))
+                        MessageBox.Show("New Nhân Viên Added", "Add Nhân Viên", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    else
+                        MessageBox.Show("Error", "Add Nhân Viên", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
                 else
-                    MessageBox.Show("Error", "Add Nhân Viên", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Empty Fields", "Add Nhân Viên", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
             else
                 MessageBox.Show("Empty Fields", "Add Nhân Viên", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -275,7 +299,7 @@ namespace DoAn1
         private void ButtonSearch_Click(object sender, EventArgs e)
         {
             MyDB mydb = new MyDB();
-            SqlCommand command = new SqlCommand("SELECT * FROM NhanVien WHERE CONCAT(HoTen,ChucVu,PhongBan) LIKE'%" + textBoxSearch.Text + "%'", mydb.getConnection);
+            SqlCommand command = new SqlCommand("SELECT * FROM NhanVien WHERE CONCAT(HoTen,ChucVu,PhongBan) LIKE N'%" + textBoxSearch.Text + "%'", mydb.getConnection);
             mydb.openConnection();
             DataTable table = new DataTable();
             table.Load(command.ExecuteReader());

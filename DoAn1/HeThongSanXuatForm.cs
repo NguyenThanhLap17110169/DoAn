@@ -87,7 +87,60 @@ namespace DoAn1
                 MessageBox.Show(ex.Message);
             }
         }
+        bool kiemtraBoPhan(string ma)
+        {
+            MyDB mydb = new MyDB();
+            SqlCommand cmd = new SqlCommand("SELECT * FROM BoPhan WHERE MaBoPhan = @ma ", mydb.getConnection);
+            cmd.Parameters.Add("@ma", SqlDbType.NVarChar).Value = ma;
+            string str = "SELECT  count (MaBoPhan)  FROM BoPhan WHERE MaBoPhan = '" + ma + "' ";
+            SqlCommand cmd1 = new SqlCommand(str, mydb.getConnection);
 
+            mydb.openConnection();
+            int n = (int)cmd1.ExecuteScalar();
+            mydb.closeConnection();
+            if (n >= 1)
+            {
+                return false;
+            }
+            else
+                return true;
+        }
+        bool kiemtraPhongBan(string ma)
+        {
+            MyDB mydb = new MyDB();
+            SqlCommand cmd = new SqlCommand("SELECT * FROM PhongBan WHERE MaPhongBan = @ma ", mydb.getConnection);
+            cmd.Parameters.Add("@ma", SqlDbType.NVarChar).Value = ma;
+            string str = "SELECT  count (MaPhongBan)  FROM PhongBan WHERE MaPhongBan = '" + ma + "' ";
+            SqlCommand cmd1 = new SqlCommand(str, mydb.getConnection);
+
+            mydb.openConnection();
+            int n = (int)cmd1.ExecuteScalar();
+            mydb.closeConnection();
+            if (n >= 1)
+            {
+                return false;
+            }
+            else
+                return true;
+        }
+        bool kiemtraNhom(string ma)
+        {
+            MyDB mydb = new MyDB();
+            SqlCommand cmd = new SqlCommand("SELECT * FROM Nhom WHERE MaNhom = @ma ", mydb.getConnection);
+            cmd.Parameters.Add("@ma", SqlDbType.NVarChar).Value = ma;
+            string str = "SELECT  count (MaNhom)  FROM Nhom WHERE MaNhom = '" + ma + "' ";
+            SqlCommand cmd1 = new SqlCommand(str, mydb.getConnection);
+
+            mydb.openConnection();
+            int n = (int)cmd1.ExecuteScalar();
+            mydb.closeConnection();
+            if (n >= 1)
+            {
+                return false;
+            }
+            else
+                return true;
+        }
         private void ButtonThem_Click(object sender, EventArgs e)
         {
             BoPhan bophan = new BoPhan();
@@ -97,7 +150,7 @@ namespace DoAn1
             string ten = txtTen.Text;
             if (radioButton1.Checked == true)
             {
-                if (verif())
+                if (verif()&&kiemtraBoPhan(ma))
                 {
                     if (bophan.insertBoPhan(ma, ten))
                         MessageBox.Show("New Bộ Phận Added", "Add Bộ Phận", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -110,7 +163,7 @@ namespace DoAn1
             }
             else if(radioButton2.Checked == true)
             {
-                if (verif())
+                if (verif()&& kiemtraPhongBan(ma))
                 {
                     if (phongban.insertPhongBan(ma, ten))
                         MessageBox.Show("New Phòng Ban Added", "Add Phòng Ban", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -123,7 +176,7 @@ namespace DoAn1
             }
             else if(radioButton3.Checked == true)
             {
-                if (verif())
+                if (verif()&&kiemtraNhom(ma))
                 {
                     if (nhom.insertNhom(ma, ten))
                         MessageBox.Show("New Nhóm Added", "Add Nhóm", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -159,7 +212,7 @@ namespace DoAn1
                 {
                     try
                     {
-                        if (bophan.UpdateBoPhan(ma, ten))
+                        if (bophan.UpdateBoPhan(ma, ten) )
                         {
                             MessageBox.Show("BoPhan Information Update", "Edit BoPhan", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
@@ -328,19 +381,26 @@ namespace DoAn1
             txtMa.Text = DataGridView1.CurrentRow.Cells[0].Value.ToString();
             txtTen.Text = DataGridView1.CurrentRow.Cells[1].Value.ToString();
         }
-
-        private void RadioButton1_CheckedChanged(object sender, EventArgs e)
+        void clear()
         {
+            txtMa.Clear();
+            txtTen.Clear();
+        }
+            private void RadioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+            clear();
             getdata();
         }
 
         private void RadioButton2_CheckedChanged(object sender, EventArgs e)
         {
+            clear();
             getdata1();
         }
 
         private void RadioButton3_CheckedChanged(object sender, EventArgs e)
         {
+            clear();
             getdata2();
         }
     }

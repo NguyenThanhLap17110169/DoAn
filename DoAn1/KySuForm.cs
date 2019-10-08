@@ -79,36 +79,59 @@ namespace DoAn1
                 MessageBox.Show(ex.Message);
             }
         }
+        bool kiemtra(string ma)
+        {
+            MyDB mydb = new MyDB();
+            SqlCommand cmd = new SqlCommand("SELECT * FROM KySu WHERE MaKS = @ma ", mydb.getConnection);
+            cmd.Parameters.Add("@ma", SqlDbType.NVarChar).Value = ma;
+            string str = "SELECT  count (MaKS)  FROM KySu WHERE MaKS = '" + ma + "' ";
+            SqlCommand cmd1 = new SqlCommand(str, mydb.getConnection);
+
+            mydb.openConnection();
+            int n = (int)cmd1.ExecuteScalar();
+            mydb.closeConnection();
+            if (n >= 1)
+            {
+                return false;
+            }
+            else
+                return true;
+        }
         private void ButtonThem_Click(object sender, EventArgs e)
         {
             KySu kysu = new KySu();
-            string ma = txtMaKS.Text;
-            int l = ma.Length;
-            string hoten = txtTenKS.Text;
-            DateTime ngaysinh = dateTimeNgaysinh.Value;
-            string dienthoai = txtSDT.Text;
-            string diachi = txtDCtamtru.Text;
-            string chucvu = ComboBoxChucVu.Text;
-            string bophan = ComboBoxBoPhan.Text;
-            string trinhdo = ComboBoxTrinhDo.Text;
-            string nganhdaotao = ComboBoxNganhDaoTao.Text;
-            string gioitinh = "Nam";
-            if (radioButtonFemale.Checked)
-                gioitinh = "Nu";
-            MemoryStream hinhanh = new MemoryStream();
-            int born_year = dateTimeNgaysinh.Value.Year;
-            int this_year = DateTime.Now.Year;
-            if (((this_year - born_year) < 18) || ((this_year - born_year) > 100))
+            if (verif() )
             {
-                MessageBox.Show("The KySu Age Must Be Between 18 and 100 year", "Invalid Birth Date", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            else if (l > 2 && ((ma[0].ToString() == "K" && ma[1].ToString() == "S") || (ma[0].ToString() == "Q" && ma[1].ToString() == "L")) && verif())
-            {
-                pictureBoxKySuImage.Image.Save(hinhanh, pictureBoxKySuImage.Image.RawFormat);
-                if (kysu.insertKySu(ma, hoten, ngaysinh, gioitinh, diachi, dienthoai, trinhdo, chucvu, nganhdaotao, bophan, hinhanh))
-                    MessageBox.Show("New kỹ Sư Added", "Add kỹ Sư", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                string ma = txtMaKS.Text;
+                int l = ma.Length;
+                string hoten = txtTenKS.Text;
+                DateTime ngaysinh = dateTimeNgaysinh.Value;
+                string dienthoai = txtSDT.Text;
+                string diachi = txtDCtamtru.Text;
+                string chucvu = ComboBoxChucVu.Text;
+                string bophan = ComboBoxBoPhan.Text;
+                string trinhdo = ComboBoxTrinhDo.Text;
+                string nganhdaotao = ComboBoxNganhDaoTao.Text;
+                string gioitinh = "Nam";
+                if (radioButtonFemale.Checked)
+                    gioitinh = "Nu";
+                MemoryStream hinhanh = new MemoryStream();
+                int born_year = dateTimeNgaysinh.Value.Year;
+                int this_year = DateTime.Now.Year;
+                if (((this_year - born_year) < 18) || ((this_year - born_year) > 100))
+                {
+                    MessageBox.Show("The KySu Age Must Be Between 18 and 100 year", "Invalid Birth Date", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else if (l > 2 && ((ma[0].ToString() == "K" && ma[1].ToString() == "S") || (ma[0].ToString() == "Q" && ma[1].ToString() == "L")))
+                {
+                    pictureBoxKySuImage.Image.Save(hinhanh, pictureBoxKySuImage.Image.RawFormat);
+                    if (kysu.insertKySu(ma, hoten, ngaysinh, gioitinh, diachi, dienthoai, trinhdo, chucvu, nganhdaotao, bophan, hinhanh))
+                        MessageBox.Show("New kỹ Sư Added", "Add kỹ Sư", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    else
+                        MessageBox.Show("Error", "Add kỹ Sư", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
                 else
-                    MessageBox.Show("Error", "Add kỹ Sư", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Empty Fields", "Add kỹ Sư", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
             else
                 MessageBox.Show("Empty Fields", "Add kỹ Sư", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -322,7 +345,7 @@ namespace DoAn1
         private void ButtonSearch_Click(object sender, EventArgs e)
         {
             MyDB mydb = new MyDB();
-            SqlCommand command = new SqlCommand("SELECT * FROM KySu WHERE CONCAT(HoTen,ChucVu,BoPhan) LIKE'%" + textBoxSearch.Text + "%'", mydb.getConnection);
+            SqlCommand command = new SqlCommand("SELECT * FROM KySu WHERE CONCAT(HoTen,ChucVu,BoPhan) LIKE N'%" + textBoxSearch.Text + "%'", mydb.getConnection);
             mydb.openConnection();
             DataTable table = new DataTable();
             table.Load(command.ExecuteReader());

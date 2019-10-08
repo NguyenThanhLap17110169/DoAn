@@ -16,16 +16,16 @@ namespace DoAn1
             MyDB mydb = new MyDB();
             SqlCommand command = new SqlCommand("INSERT INTO KySu (MaKS, HoTen, NgaySinh, GioiTinh, DiaChi, SĐT, TrinhDo, ChucVu, NganhDaoTao, BoPhan , HinhAnh) " +
                 "VALUES (@ma, @ht, @ns, @gt, @dc, @dt, @td, @cv, @ndt,@bp,@ha)", mydb.getConnection);
-            command.Parameters.Add("@ma", SqlDbType.VarChar).Value = maks;
-            command.Parameters.Add("@ht", SqlDbType.VarChar).Value = hoten;
+            command.Parameters.Add("@ma", SqlDbType.NVarChar).Value = maks;
+            command.Parameters.Add("@ht", SqlDbType.NVarChar).Value = hoten;
             command.Parameters.Add("@ns", SqlDbType.DateTime).Value = ngaysinh;
-            command.Parameters.Add("@gt", SqlDbType.VarChar).Value = gioitinh;
-            command.Parameters.Add("@dc", SqlDbType.VarChar).Value = diachi;
-            command.Parameters.Add("@dt", SqlDbType.VarChar).Value = sđt;
-            command.Parameters.Add("@td", SqlDbType.VarChar).Value = trinhdo;
-            command.Parameters.Add("@cv", SqlDbType.VarChar).Value = chucvu;
-            command.Parameters.Add("@ndt", SqlDbType.VarChar).Value = nganhdaotao;
-            command.Parameters.Add("@bp", SqlDbType.VarChar).Value = bophan;
+            command.Parameters.Add("@gt", SqlDbType.NVarChar).Value = gioitinh;
+            command.Parameters.Add("@dc", SqlDbType.NVarChar).Value = diachi;
+            command.Parameters.Add("@dt", SqlDbType.NVarChar).Value = sđt;
+            command.Parameters.Add("@td", SqlDbType.NVarChar).Value = trinhdo;
+            command.Parameters.Add("@cv", SqlDbType.NVarChar).Value = chucvu;
+            command.Parameters.Add("@ndt", SqlDbType.NVarChar).Value = nganhdaotao;
+            command.Parameters.Add("@bp", SqlDbType.NVarChar).Value = bophan;
             command.Parameters.Add("@ha", SqlDbType.Image).Value = hinhanh.ToArray();
 
             mydb.openConnection();
@@ -45,7 +45,7 @@ namespace DoAn1
         {
             MyDB mydb = new MyDB();
             SqlCommand cmd = new SqlCommand("DELETE FROM KySu WHERE MaKS = @ma ", mydb.getConnection);
-            cmd.Parameters.Add("@ma", SqlDbType.VarChar).Value = ma;
+            cmd.Parameters.Add("@ma", SqlDbType.NVarChar).Value = ma;
             mydb.openConnection();
             if ((cmd.ExecuteNonQuery() == 1))
             {
@@ -64,16 +64,16 @@ namespace DoAn1
         {
             MyDB mydb = new MyDB();
             SqlCommand command = new SqlCommand("UPDATE KySu SET MaKS=@ma,HoTen=@ht,NgaySinh=@ns,GioiTinh=@gt,DiaChi=@dc,SĐT=@dt,TrinhDo=@td,ChucVu=@cv,NganhDaoTao=@ndt,BoPhan=@bp,HinhAnh=@ha WHERE MaKS=@ma", mydb.getConnection);
-            command.Parameters.Add("@ma", SqlDbType.VarChar).Value = maks;
-            command.Parameters.Add("@ht", SqlDbType.VarChar).Value = hoten;
+            command.Parameters.Add("@ma", SqlDbType.NVarChar).Value = maks;
+            command.Parameters.Add("@ht", SqlDbType.NVarChar).Value = hoten;
             command.Parameters.Add("@ns", SqlDbType.DateTime).Value = ngaysinh;
-            command.Parameters.Add("@gt", SqlDbType.VarChar).Value = gioitinh;
-            command.Parameters.Add("@dc", SqlDbType.VarChar).Value = diachi;
-            command.Parameters.Add("@dt", SqlDbType.VarChar).Value = sđt;
-            command.Parameters.Add("@td", SqlDbType.VarChar).Value = trinhdo;
-            command.Parameters.Add("@cv", SqlDbType.VarChar).Value = chucvu;
-            command.Parameters.Add("@ndt", SqlDbType.VarChar).Value = nganhdaotao;
-            command.Parameters.Add("@bp", SqlDbType.VarChar).Value = bophan;
+            command.Parameters.Add("@gt", SqlDbType.NVarChar).Value = gioitinh;
+            command.Parameters.Add("@dc", SqlDbType.NVarChar).Value = diachi;
+            command.Parameters.Add("@dt", SqlDbType.NVarChar).Value = sđt;
+            command.Parameters.Add("@td", SqlDbType.NVarChar).Value = trinhdo;
+            command.Parameters.Add("@cv", SqlDbType.NVarChar).Value = chucvu;
+            command.Parameters.Add("@ndt", SqlDbType.NVarChar).Value = nganhdaotao;
+            command.Parameters.Add("@bp", SqlDbType.NVarChar).Value = bophan;
             command.Parameters.Add("@ha", SqlDbType.Image).Value = hinhanh.ToArray();
 
             mydb.openConnection();

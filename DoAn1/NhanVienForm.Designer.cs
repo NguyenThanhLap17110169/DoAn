@@ -136,9 +136,9 @@
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(589, 340);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(61, 19);
+            this.label8.Size = new System.Drawing.Size(46, 19);
             this.label8.TabIndex = 190;
-            this.label8.Text = "Đặt Lại";
+            this.label8.Text = "Nhập";
             // 
             // txtDCtamtru
             // 
@@ -433,12 +433,13 @@
             // 
             // ComboBoxTrinhDo
             // 
+            this.ComboBoxTrinhDo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.ComboBoxTrinhDo.FormattingEnabled = true;
             this.ComboBoxTrinhDo.Items.AddRange(new object[] {
-            "TotNghiep12",
-            "HocNghe",
-            "CaoDang",
-            "DaiHoc"});
+            "Tốt Nghiệp 12",
+            "Học Nghề",
+            "Cao Đẳng",
+            "Đại Học"});
             this.ComboBoxTrinhDo.Location = new System.Drawing.Point(519, 159);
             this.ComboBoxTrinhDo.Name = "ComboBoxTrinhDo";
             this.ComboBoxTrinhDo.Size = new System.Drawing.Size(166, 27);
@@ -446,9 +447,10 @@
             // 
             // ComboBoxChucVu
             // 
+            this.ComboBoxChucVu.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.ComboBoxChucVu.FormattingEnabled = true;
             this.ComboBoxChucVu.Items.AddRange(new object[] {
-            "NhanVien"});
+            "Nhân Viên"});
             this.ComboBoxChucVu.Location = new System.Drawing.Point(519, 120);
             this.ComboBoxChucVu.Name = "ComboBoxChucVu";
             this.ComboBoxChucVu.Size = new System.Drawing.Size(166, 27);
@@ -456,16 +458,17 @@
             // 
             // ComboBoxCongViec
             // 
+            this.ComboBoxCongViec.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.ComboBoxCongViec.FormattingEnabled = true;
             this.ComboBoxCongViec.Items.AddRange(new object[] {
-            "KiemTraThuChi",
-            "KeHoachKinhDoanh",
-            "KeToan",
-            "TuyenNhanSu",
-            "SuaChua-BaoTri",
-            "KiemTraHeThong",
-            "KiemTraChatLuongSanPham",
-            "ThietKeSanPham"});
+            "Kiem Tra Thu Chi",
+            "Kế Hoạch Kinh Doanh",
+            "Kế Toán",
+            "Tuyển Nhận Sự",
+            "Sửa Chữa - Bảo Trì",
+            "Kiểm Tra Hệ Thống",
+            "Kiểm Tra Chất Lượng Sản Phẩm",
+            "Thiết Kế Sản Phẩm"});
             this.ComboBoxCongViec.Location = new System.Drawing.Point(519, 76);
             this.ComboBoxCongViec.Name = "ComboBoxCongViec";
             this.ComboBoxCongViec.Size = new System.Drawing.Size(166, 27);
@@ -473,16 +476,17 @@
             // 
             // ComboBoxPhongBan
             // 
+            this.ComboBoxPhongBan.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.ComboBoxPhongBan.FormattingEnabled = true;
             this.ComboBoxPhongBan.Items.AddRange(new object[] {
-            "TaiChinh-KeToan",
-            "HanhChinh-NhanSu",
-            "KỹThuat-BaoTri",
-            "SanXuat",
-            "QuanLyChatLuong",
-            "KinhDoanh",
-            "ThietKe",
-            "Marketing-TruyenThong"});
+            "Tài Chính - Kế Toán",
+            "Hành Chính - Nhân Sự",
+            "Kỹ Thuật - Bảo Trì",
+            "Sản Xuất",
+            "Quản Lý Chất Lượng",
+            "Kinh Doanh",
+            "Thiết Kế",
+            "Marketing - Truyền Thông"});
             this.ComboBoxPhongBan.Location = new System.Drawing.Point(519, 31);
             this.ComboBoxPhongBan.Name = "ComboBoxPhongBan";
             this.ComboBoxPhongBan.Size = new System.Drawing.Size(166, 27);

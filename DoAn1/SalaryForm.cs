@@ -163,7 +163,7 @@ namespace DoAn1
             MyDB mydb = new MyDB();
             if(radioButton1.Checked == true)
             {
-                SqlCommand command = new SqlCommand("SELECT KySu.MaKS, KySu.HoTen, KySu.GioiTinh, KySu.ChucVu, KySu.BoPhan, Luong.Luong FROM KySu, Luong WHERE KySu.ChucVu=Luong.Ma and CONCAT(KySu.HoTen,KySu.ChucVu,KySu.BoPhan) LIKE'%" + textBoxSearch.Text + "%'", mydb.getConnection);
+                SqlCommand command = new SqlCommand("SELECT KySu.MaKS, KySu.HoTen, KySu.GioiTinh, KySu.ChucVu, KySu.BoPhan, Luong.Luong FROM KySu, Luong WHERE KySu.ChucVu=Luong.Ma and CONCAT(KySu.HoTen,KySu.ChucVu,KySu.BoPhan) LIKE N'%" + textBoxSearch.Text + "%'", mydb.getConnection);
                 mydb.openConnection();
                 DataTable table = new DataTable();
                 table.Load(command.ExecuteReader());

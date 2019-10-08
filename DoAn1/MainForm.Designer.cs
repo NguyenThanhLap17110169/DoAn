@@ -38,7 +38,6 @@
             this.nhânViênToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.côngNhânToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.hệThốngSảnXuấtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.lươngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thoátToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.labelInformation = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -102,11 +101,10 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.kỹSưToolStripMenuItem,
             this.hệThốngSảnXuấtToolStripMenuItem,
-            this.lươngToolStripMenuItem,
             this.thoátToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(344, 8);
+            this.menuStrip1.Location = new System.Drawing.Point(409, 8);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(372, 29);
+            this.menuStrip1.Size = new System.Drawing.Size(305, 29);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -152,14 +150,6 @@
             this.hệThốngSảnXuấtToolStripMenuItem.Size = new System.Drawing.Size(154, 25);
             this.hệThốngSảnXuấtToolStripMenuItem.Text = "Hệ Thống Sản Xuất";
             this.hệThốngSảnXuấtToolStripMenuItem.Click += new System.EventHandler(this.HệThốngSảnXuấtToolStripMenuItem_Click);
-            // 
-            // lươngToolStripMenuItem
-            // 
-            this.lươngToolStripMenuItem.ForeColor = System.Drawing.Color.Blue;
-            this.lươngToolStripMenuItem.Name = "lươngToolStripMenuItem";
-            this.lươngToolStripMenuItem.Size = new System.Drawing.Size(67, 25);
-            this.lươngToolStripMenuItem.Text = "Lương";
-            this.lươngToolStripMenuItem.Click += new System.EventHandler(this.LươngToolStripMenuItem_Click);
             // 
             // thoátToolStripMenuItem
             // 
@@ -224,7 +214,6 @@
         private System.Windows.Forms.Label labelInformation;
         private System.Windows.Forms.ToolStripMenuItem kỹSưToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem hệThốngSảnXuấtToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem lươngToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem thoátToolStripMenuItem;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ToolStripMenuItem kỹSưToolStripMenuItem1;
