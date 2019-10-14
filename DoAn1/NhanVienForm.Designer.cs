@@ -75,6 +75,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.textBoxSearch = new System.Windows.Forms.TextBox();
+            this.labelNhanVien = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxNhanVienImage)).BeginInit();
@@ -125,9 +126,9 @@
             // DataGridView1
             // 
             this.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DataGridView1.Location = new System.Drawing.Point(26, 405);
+            this.DataGridView1.Location = new System.Drawing.Point(6, 405);
             this.DataGridView1.Name = "DataGridView1";
-            this.DataGridView1.Size = new System.Drawing.Size(988, 254);
+            this.DataGridView1.Size = new System.Drawing.Size(1012, 248);
             this.DataGridView1.TabIndex = 193;
             this.DataGridView1.DoubleClick += new System.EventHandler(this.DataGridView1_DoubleClick);
             // 
@@ -246,6 +247,7 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.groupBox1.Controls.Add(this.labelNhanVien);
             this.groupBox1.Controls.Add(this.label11);
             this.groupBox1.Controls.Add(this.buttonLamMoi);
             this.groupBox1.Controls.Add(this.label10);
@@ -291,7 +293,7 @@
             this.groupBox1.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(12, 56);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1024, 665);
+            this.groupBox1.Size = new System.Drawing.Size(1024, 681);
             this.groupBox1.TabIndex = 193;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông Tin Hồ Sơ";
@@ -461,7 +463,7 @@
             this.ComboBoxCongViec.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.ComboBoxCongViec.FormattingEnabled = true;
             this.ComboBoxCongViec.Items.AddRange(new object[] {
-            "Kiem Tra Thu Chi",
+            "Kiểm Tra Thu Chi",
             "Kế Hoạch Kinh Doanh",
             "Kế Toán",
             "Tuyển Nhận Sự",
@@ -597,18 +599,30 @@
             this.textBoxSearch.Size = new System.Drawing.Size(268, 26);
             this.textBoxSearch.TabIndex = 195;
             // 
+            // labelNhanVien
+            // 
+            this.labelNhanVien.AutoSize = true;
+            this.labelNhanVien.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.labelNhanVien.Location = new System.Drawing.Point(763, 655);
+            this.labelNhanVien.Name = "labelNhanVien";
+            this.labelNhanVien.Size = new System.Drawing.Size(251, 21);
+            this.labelNhanVien.TabIndex = 203;
+            this.labelNhanVien.Text = "Tổng nhân viên trong danh sách là:";
+            // 
             // NhanVienForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(1049, 733);
+            this.ClientSize = new System.Drawing.Size(1049, 741);
             this.Controls.Add(this.buttonSearch);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.textBoxSearch);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "NhanVienForm";
             this.Text = "NhanVienForm";
+            this.Load += new System.EventHandler(this.NhanVienForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DataGridView1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -666,5 +680,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBoxSearch;
+        private System.Windows.Forms.Label labelNhanVien;
     }
 }

@@ -9,7 +9,6 @@ F:\DoAn1\DoAn1\DoAn1\obj\Debug\DoAn1.LoginForm.resources
 F:\DoAn1\DoAn1\DoAn1\obj\Debug\DoAn1.MainForm.resources
 F:\DoAn1\DoAn1\DoAn1\obj\Debug\DoAn1.NhanVienForm.resources
 F:\DoAn1\DoAn1\DoAn1\obj\Debug\DoAn1.Properties.Resources.resources
-F:\DoAn1\DoAn1\DoAn1\obj\Debug\DoAn1.SalaryForm.resources
 F:\DoAn1\DoAn1\DoAn1\obj\Debug\DoAn1.csproj.GenerateResource.cache
 F:\DoAn1\DoAn1\DoAn1\obj\Debug\DoAn1.csproj.CoreCompileInputs.cache
 F:\DoAn1\DoAn1\DoAn1\obj\Debug\DoAn1.exe

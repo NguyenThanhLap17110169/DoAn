@@ -114,7 +114,7 @@ namespace DoAn1
                 string congviec = ComboBoxCongViec.Text;
                 string gioitinh = "Nam";
                 if (radioButtonFemale.Checked)
-                    gioitinh = "Nu";
+                    gioitinh = "Nữ";
                 MemoryStream hinhanh = new MemoryStream();
                 int born_year = dateTimeNgaysinh.Value.Year;
                 int this_year = DateTime.Now.Year;
@@ -192,7 +192,7 @@ namespace DoAn1
             string congviec = ComboBoxCongViec.Text;
             string gioitinh = "Nam";
             if (radioButtonFemale.Checked)
-                gioitinh = "Nu";
+                gioitinh = "Nữ";
             MemoryStream hinhanh = new MemoryStream();
             int born_year = dateTimeNgaysinh.Value.Year;
             int this_year = DateTime.Now.Year;
@@ -268,6 +268,7 @@ namespace DoAn1
         private void ButtonLamMoi_Click(object sender, EventArgs e)
         {
             getdata();
+            labelNhanVien.Text = ("Tổng nhân viên trong danh sách: " + DataGridView1.RowCount);
         }
 
         private void ButtonDatLai_Click(object sender, EventArgs e)
@@ -316,7 +317,7 @@ namespace DoAn1
                     ExcelNV exnv = new ExcelNV();
                     exnv.ExportExcel(table, "Nhân Viên", "Danh sách nhân viên cần tìm");
                     // đếm nhân viên
-                    //   labelTotalNhanVien.Text = ("Tổng Nhân Viên trong danh sách: " + DataGridView1.RowCount);
+                    labelNhanVien.Text = ("Tổng nhân viên trong danh sách: " + DataGridView1.RowCount);
                     mydb.closeConnection();
                 }
                 catch (Exception ex)
@@ -343,7 +344,7 @@ namespace DoAn1
             ComboBoxPhongBan.Text = DataGridView1.CurrentRow.Cells[9].Value.ToString();
 
             string gender = DataGridView1.CurrentRow.Cells[3].Value.ToString();
-            string gender1 = "Nu";
+            string gender1 = "Nữ";
             int flag = 1;
             for (int i = 0; i < gender1.Length; i++)
             {
@@ -409,6 +410,11 @@ namespace DoAn1
             {
                 MessageBox.Show("Not Found");
             }
+        }
+
+        private void NhanVienForm_Load(object sender, EventArgs e)
+        {
+            labelNhanVien.Text = ("Tổng nhân viên trong danh sách: " + DataGridView1.RowCount);
         }
     }
 }

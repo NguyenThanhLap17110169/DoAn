@@ -114,7 +114,7 @@ namespace DoAn1
                 string nganhdaotao = ComboBoxNganhDaoTao.Text;
                 string gioitinh = "Nam";
                 if (radioButtonFemale.Checked)
-                    gioitinh = "Nu";
+                    gioitinh = "Nữ";
                 MemoryStream hinhanh = new MemoryStream();
                 int born_year = dateTimeNgaysinh.Value.Year;
                 int this_year = DateTime.Now.Year;
@@ -169,7 +169,7 @@ namespace DoAn1
             string nganhdaotao = ComboBoxNganhDaoTao.Text;
             string gioitinh = "Nam";
             if (radioButtonFemale.Checked)
-                gioitinh = "Nu";
+                gioitinh = "Nữ";
             MemoryStream hinhanh = new MemoryStream();
             int born_year = dateTimeNgaysinh.Value.Year;
             int this_year = DateTime.Now.Year;
@@ -267,6 +267,7 @@ namespace DoAn1
         private void ButtonLamMoi_Click(object sender, EventArgs e)
         {
             getdata();
+            labelKySu.Text = ("Tổng kỹ sư trong danh sách: " + DataGridView1.RowCount);
         }
 
         private void ButtonDatLai_Click(object sender, EventArgs e)
@@ -308,7 +309,7 @@ namespace DoAn1
             ComboBoxBoPhan.Text = DataGridView1.CurrentRow.Cells[9].Value.ToString();
 
             string gender = DataGridView1.CurrentRow.Cells[3].Value.ToString();
-            string gender1 = "Nu";
+            string gender1 = "Nữ";
             int flag = 1;
             for (int i = 0; i < gender1.Length; i++)
             {
@@ -361,8 +362,8 @@ namespace DoAn1
                     piccol.ImageLayout = DataGridViewImageCellLayout.Stretch;
                     ExcelKySu exks = new ExcelKySu();
                     exks.ExportExcel(table, "Kỹ sư", "Danh sách kỹ sư cần tìm");
-                    // đếm nhân viên
-                    //   labelTotalNhanVien.Text = ("Tổng Nhân Viên trong danh sách: " + DataGridView1.RowCount);
+                    // đếm kỹ sư
+                    labelKySu.Text = ("Tổng kỹ sư trong danh sách: " + DataGridView1.RowCount);
                     mydb.closeConnection();
                 }
                 catch (Exception ex)
@@ -395,8 +396,7 @@ namespace DoAn1
                     piccol.ImageLayout = DataGridViewImageCellLayout.Stretch;
                     ExcelKySu exks = new ExcelKySu();
                     exks.ExportExcel(table, "Kỹ sư", "Danh sách kỹ sư");
-                    // đếm nhân viên
-                    //   labelTotalNhanVien.Text = ("Tổng Nhân Viên trong danh sách: " + DataGridView1.RowCount);
+           
                     mydb.closeConnection();
                 }
                 catch (Exception ex)
@@ -408,6 +408,11 @@ namespace DoAn1
             {
                 MessageBox.Show("Not Found");
             }
+        }
+
+        private void KySuForm_Load(object sender, EventArgs e)
+        {
+            labelKySu.Text = ("Tổng kỹ sư trong danh sách: " + DataGridView1.RowCount);
         }
     }
 }

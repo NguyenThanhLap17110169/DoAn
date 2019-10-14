@@ -25,12 +25,6 @@ namespace DoAn1
             ht.ShowDialog();
         }
 
-        private void LươngToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            SalaryForm s = new SalaryForm();
-            s.ShowDialog();
-        }
-
         private void ThoátToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Close();

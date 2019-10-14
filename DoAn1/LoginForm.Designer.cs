@@ -146,6 +146,7 @@
             this.Controls.Add(this.Password);
             this.Controls.Add(this.buttonLOGIN);
             this.Controls.Add(this.buttonCANCEL);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "LoginForm";
             this.Text = "Form1";
             this.ResumeLayout(false);

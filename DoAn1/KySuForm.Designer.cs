@@ -75,6 +75,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.labelKySu = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxKySuImage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -158,7 +159,7 @@
             this.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DataGridView1.Location = new System.Drawing.Point(6, 405);
             this.DataGridView1.Name = "DataGridView1";
-            this.DataGridView1.Size = new System.Drawing.Size(1012, 254);
+            this.DataGridView1.Size = new System.Drawing.Size(1012, 248);
             this.DataGridView1.TabIndex = 193;
             this.DataGridView1.DoubleClick += new System.EventHandler(this.DataGridView1_DoubleClick);
             // 
@@ -387,6 +388,7 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Turquoise;
+            this.groupBox1.Controls.Add(this.labelKySu);
             this.groupBox1.Controls.Add(this.label11);
             this.groupBox1.Controls.Add(this.buttonLamMoi);
             this.groupBox1.Controls.Add(this.label10);
@@ -432,7 +434,7 @@
             this.groupBox1.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(12, 56);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1024, 665);
+            this.groupBox1.Size = new System.Drawing.Size(1024, 683);
             this.groupBox1.TabIndex = 197;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông Tin Hồ Sơ";
@@ -591,18 +593,30 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Mã Kỹ Sư";
             // 
+            // labelKySu
+            // 
+            this.labelKySu.AutoSize = true;
+            this.labelKySu.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.labelKySu.Location = new System.Drawing.Point(795, 655);
+            this.labelKySu.Name = "labelKySu";
+            this.labelKySu.Size = new System.Drawing.Size(219, 21);
+            this.labelKySu.TabIndex = 201;
+            this.labelKySu.Text = "Tổng kỹ sư trong danh sách là:";
+            // 
             // KySuForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSeaGreen;
-            this.ClientSize = new System.Drawing.Size(1047, 733);
+            this.ClientSize = new System.Drawing.Size(1047, 741);
             this.Controls.Add(this.textBoxSearch);
             this.Controls.Add(this.buttonSearch);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.groupBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "KySuForm";
             this.Text = "KySuForm1cs";
+            this.Load += new System.EventHandler(this.KySuForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxKySuImage)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridView1)).EndInit();
             this.groupBox1.ResumeLayout(false);
@@ -660,5 +674,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label labelKySu;
     }
 }

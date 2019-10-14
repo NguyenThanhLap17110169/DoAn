@@ -123,7 +123,7 @@
             // 
             this.kỹSưToolStripMenuItem1.ForeColor = System.Drawing.Color.Blue;
             this.kỹSưToolStripMenuItem1.Name = "kỹSưToolStripMenuItem1";
-            this.kỹSưToolStripMenuItem1.Size = new System.Drawing.Size(180, 26);
+            this.kỹSưToolStripMenuItem1.Size = new System.Drawing.Size(159, 26);
             this.kỹSưToolStripMenuItem1.Text = "Kỹ Sư";
             this.kỹSưToolStripMenuItem1.Click += new System.EventHandler(this.KỹSưToolStripMenuItem1_Click);
             // 
@@ -131,7 +131,7 @@
             // 
             this.nhânViênToolStripMenuItem1.ForeColor = System.Drawing.Color.Blue;
             this.nhânViênToolStripMenuItem1.Name = "nhânViênToolStripMenuItem1";
-            this.nhânViênToolStripMenuItem1.Size = new System.Drawing.Size(180, 26);
+            this.nhânViênToolStripMenuItem1.Size = new System.Drawing.Size(159, 26);
             this.nhânViênToolStripMenuItem1.Text = "Nhân Viên";
             this.nhânViênToolStripMenuItem1.Click += new System.EventHandler(this.NhânViênToolStripMenuItem1_Click);
             // 
@@ -139,7 +139,7 @@
             // 
             this.côngNhânToolStripMenuItem1.ForeColor = System.Drawing.Color.Blue;
             this.côngNhânToolStripMenuItem1.Name = "côngNhânToolStripMenuItem1";
-            this.côngNhânToolStripMenuItem1.Size = new System.Drawing.Size(180, 26);
+            this.côngNhânToolStripMenuItem1.Size = new System.Drawing.Size(159, 26);
             this.côngNhânToolStripMenuItem1.Text = "Công Nhân";
             this.côngNhânToolStripMenuItem1.Click += new System.EventHandler(this.CôngNhânToolStripMenuItem1_Click);
             // 
@@ -191,6 +191,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "MainForm";
             this.Text = "MainForm";
             this.Load += new System.EventHandler(this.MainForm_Load);
