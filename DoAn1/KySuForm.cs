@@ -100,9 +100,9 @@ namespace DoAn1
         private void ButtonThem_Click(object sender, EventArgs e)
         {
             KySu kysu = new KySu();
-            if (verif() )
-            {
-                string ma = txtMaKS.Text;
+            string ma = txtMaKS.Text;
+            if (verif() && kiemtra(ma))
+            { 
                 int l = ma.Length;
                 string hoten = txtTenKS.Text;
                 DateTime ngaysinh = dateTimeNgaysinh.Value;
@@ -413,6 +413,11 @@ namespace DoAn1
         private void KySuForm_Load(object sender, EventArgs e)
         {
             labelKySu.Text = ("Tổng kỹ sư trong danh sách: " + DataGridView1.RowCount);
+        }
+
+        private void ComboBoxBoPhan_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

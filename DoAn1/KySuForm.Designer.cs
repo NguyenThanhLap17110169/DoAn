@@ -59,6 +59,7 @@
             this.buttonSearch = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.labelKySu = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
             this.txtSDT = new System.Windows.Forms.TextBox();
             this.ComboBoxChucVu = new System.Windows.Forms.ComboBox();
@@ -75,7 +76,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.labelKySu = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxKySuImage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -439,6 +439,16 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông Tin Hồ Sơ";
             // 
+            // labelKySu
+            // 
+            this.labelKySu.AutoSize = true;
+            this.labelKySu.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.labelKySu.Location = new System.Drawing.Point(795, 655);
+            this.labelKySu.Name = "labelKySu";
+            this.labelKySu.Size = new System.Drawing.Size(219, 21);
+            this.labelKySu.TabIndex = 201;
+            this.labelKySu.Text = "Tổng kỹ sư trong danh sách là:";
+            // 
             // label24
             // 
             this.label24.AutoSize = true;
@@ -495,6 +505,7 @@
             this.ComboBoxBoPhan.Name = "ComboBoxBoPhan";
             this.ComboBoxBoPhan.Size = new System.Drawing.Size(166, 27);
             this.ComboBoxBoPhan.TabIndex = 27;
+            this.ComboBoxBoPhan.SelectedIndexChanged += new System.EventHandler(this.ComboBoxBoPhan_SelectedIndexChanged);
             // 
             // txtMaKS
             // 
@@ -592,16 +603,6 @@
             this.label1.Size = new System.Drawing.Size(75, 19);
             this.label1.TabIndex = 0;
             this.label1.Text = "Mã Kỹ Sư";
-            // 
-            // labelKySu
-            // 
-            this.labelKySu.AutoSize = true;
-            this.labelKySu.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.labelKySu.Location = new System.Drawing.Point(795, 655);
-            this.labelKySu.Name = "labelKySu";
-            this.labelKySu.Size = new System.Drawing.Size(219, 21);
-            this.labelKySu.TabIndex = 201;
-            this.labelKySu.Text = "Tổng kỹ sư trong danh sách là:";
             // 
             // KySuForm
             // 

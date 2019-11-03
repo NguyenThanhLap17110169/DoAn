@@ -11,13 +11,14 @@ namespace DoAn1
 {
     class Nhom
     {
-        public bool insertNhom(string manhom, string tennhom)
+        public bool insertNhom(string manhom, string tennhom, string tenphongban)
         {
             MyDB mydb = new MyDB();
-            SqlCommand command = new SqlCommand("INSERT INTO Nhom (MaNhom, TenNhom) " +
-                "VALUES (@ma, @ten)", mydb.getConnection);
+            SqlCommand command = new SqlCommand("INSERT INTO Nhom (MaNhom, TenNhom, TenPhongBan) " +
+                "VALUES (@ma, @tenn, @tenpb)", mydb.getConnection);
             command.Parameters.Add("@ma", SqlDbType.NVarChar).Value = manhom;
-            command.Parameters.Add("@ten", SqlDbType.NVarChar).Value = tennhom;
+            command.Parameters.Add("@tenn", SqlDbType.NVarChar).Value = tennhom;
+            command.Parameters.Add("@tenpb", SqlDbType.NVarChar).Value = tenphongban;
 
             mydb.openConnection();
 
@@ -51,12 +52,13 @@ namespace DoAn1
                 return false;
             }
         }
-        public bool UpdateNhom(string manhom, string tennhom)
+        public bool UpdateNhom(string manhom, string tennhom, string tenphongban)
         {
             MyDB mydb = new MyDB();
-            SqlCommand command = new SqlCommand("UPDATE Nhom SET MaNhom=@ma,TenNhom=@ten WHERE MaNhom=@ma", mydb.getConnection);
+            SqlCommand command = new SqlCommand("UPDATE Nhom SET MaNhom=@ma,TenNhom=@tenn,TenPhongBan=@tenpb WHERE MaNhom=@ma", mydb.getConnection);
             command.Parameters.Add("@ma", SqlDbType.NVarChar).Value = manhom;
-            command.Parameters.Add("@ten", SqlDbType.NVarChar).Value = tennhom;
+            command.Parameters.Add("@tenn", SqlDbType.NVarChar).Value = tennhom;
+            command.Parameters.Add("@tenpb", SqlDbType.NVarChar).Value = tenphongban;
 
             mydb.openConnection();
             if ((command.ExecuteNonQuery() == 1))

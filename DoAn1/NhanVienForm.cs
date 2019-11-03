@@ -100,9 +100,9 @@ namespace DoAn1
         private void ButtonThem_Click(object sender, EventArgs e)
         {
             NhanVien nhanvien = new NhanVien();
-            if (verif())
+            string ma = txtMaNV.Text;
+            if (verif() && kiemtra(ma))
             {
-                string ma = txtMaNV.Text;
                 int l = ma.Length;
                 string hoten = txtTenNV.Text;
                 DateTime ngaysinh = dateTimeNgaysinh.Value;

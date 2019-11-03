@@ -11,14 +11,14 @@ namespace DoAn1
 {
     class PhongBan
     {
-        public bool insertPhongBan(string maphongban, string tenphongban)
+        public bool insertPhongBan(string maphongban, string tenphongban, string tenbophan)
         {
             MyDB mydb = new MyDB();
-            SqlCommand command = new SqlCommand("INSERT INTO PhongBan (MaPhongBan, TenPhongBan) " +
-                "VALUES (@ma, @ten)", mydb.getConnection);
+            SqlCommand command = new SqlCommand("INSERT INTO PhongBan (MaPhongBan, TenPhongBan, TenBoPhan) " +
+                "VALUES (@ma, @tenpb, @tenbp)", mydb.getConnection);
             command.Parameters.Add("@ma", SqlDbType.NVarChar).Value = maphongban;
-            command.Parameters.Add("@ten", SqlDbType.NVarChar).Value = tenphongban;
-
+            command.Parameters.Add("@tenpb", SqlDbType.NVarChar).Value = tenphongban;
+            command.Parameters.Add("@tenbp", SqlDbType.NVarChar).Value = tenbophan;
             mydb.openConnection();
 
             if ((command.ExecuteNonQuery() == 1))
@@ -51,12 +51,13 @@ namespace DoAn1
                 return false;
             }
         }
-        public bool UpdatePhongBan(string maphongban, string tenphongban)
+        public bool UpdatePhongBan(string maphongban, string tenphongban, string tenbophan)
         {
             MyDB mydb = new MyDB();
-            SqlCommand command = new SqlCommand("UPDATE PhongBan SET MaPhongBan=@ma,TenPhongBan=@ten WHERE MaPhongBan=@ma", mydb.getConnection);
+            SqlCommand command = new SqlCommand("UPDATE PhongBan SET MaPhongBan=@ma,TenPhongBan=@tenpb,TenBoPhan=@tenbp WHERE MaPhongBan=@ma", mydb.getConnection);
             command.Parameters.Add("@ma", SqlDbType.NVarChar).Value = maphongban;
-            command.Parameters.Add("@ten", SqlDbType.NVarChar).Value = tenphongban;
+            command.Parameters.Add("@tenpb", SqlDbType.NVarChar).Value = tenphongban;
+            command.Parameters.Add("@tenbp", SqlDbType.NVarChar).Value = tenbophan;
 
             mydb.openConnection();
             if ((command.ExecuteNonQuery() == 1))

@@ -101,9 +101,9 @@ namespace DoAn1
         {
             
             CongNhan congnhan = new CongNhan();
-            if (verif())
+            string ma = txtMaCN.Text;
+            if (verif()&& kiemtra(ma))
             {
-                string ma = txtMaCN.Text;
                 int l = ma.Length;
                 string hoten = txtTenCN.Text;
                 DateTime ngaysinh = dateTimeNgaysinh.Value;

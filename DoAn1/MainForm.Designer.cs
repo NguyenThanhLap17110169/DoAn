@@ -30,7 +30,6 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.kỹSưToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -40,10 +39,14 @@
             this.hệThốngSảnXuấtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thoátToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.labelInformation = new System.Windows.Forms.Label();
+            this.bộPhậnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.phòngBanToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.nhómToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -71,16 +74,6 @@
             this.panel1.Size = new System.Drawing.Size(725, 47);
             this.panel1.TabIndex = 44;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 47);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 3;
-            this.pictureBox1.TabStop = false;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -104,7 +97,7 @@
             this.thoátToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(409, 8);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(305, 29);
+            this.menuStrip1.Size = new System.Drawing.Size(425, 29);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -145,6 +138,10 @@
             // 
             // hệThốngSảnXuấtToolStripMenuItem
             // 
+            this.hệThốngSảnXuấtToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.bộPhậnToolStripMenuItem,
+            this.phòngBanToolStripMenuItem,
+            this.nhómToolStripMenuItem});
             this.hệThốngSảnXuấtToolStripMenuItem.ForeColor = System.Drawing.Color.Blue;
             this.hệThốngSảnXuấtToolStripMenuItem.Name = "hệThốngSảnXuấtToolStripMenuItem";
             this.hệThốngSảnXuấtToolStripMenuItem.Size = new System.Drawing.Size(154, 25);
@@ -170,6 +167,40 @@
             this.labelInformation.Size = new System.Drawing.Size(109, 19);
             this.labelInformation.TabIndex = 1;
             this.labelInformation.Text = "Welcome Back";
+            // 
+            // bộPhậnToolStripMenuItem
+            // 
+            this.bộPhậnToolStripMenuItem.ForeColor = System.Drawing.Color.Blue;
+            this.bộPhậnToolStripMenuItem.Name = "bộPhậnToolStripMenuItem";
+            this.bộPhậnToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
+            this.bộPhậnToolStripMenuItem.Text = "Bộ Phận";
+            this.bộPhậnToolStripMenuItem.Click += new System.EventHandler(this.bộPhậnToolStripMenuItem_Click);
+            // 
+            // phòngBanToolStripMenuItem
+            // 
+            this.phòngBanToolStripMenuItem.ForeColor = System.Drawing.Color.Blue;
+            this.phòngBanToolStripMenuItem.Name = "phòngBanToolStripMenuItem";
+            this.phòngBanToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
+            this.phòngBanToolStripMenuItem.Text = "Phòng Ban";
+            this.phòngBanToolStripMenuItem.Click += new System.EventHandler(this.phòngBanToolStripMenuItem_Click);
+            // 
+            // nhómToolStripMenuItem
+            // 
+            this.nhómToolStripMenuItem.ForeColor = System.Drawing.Color.Blue;
+            this.nhómToolStripMenuItem.Name = "nhómToolStripMenuItem";
+            this.nhómToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
+            this.nhómToolStripMenuItem.Text = "Nhóm";
+            this.nhómToolStripMenuItem.Click += new System.EventHandler(this.nhómToolStripMenuItem_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(100, 47);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabStop = false;
             // 
             // pictureBox2
             // 
@@ -197,9 +228,9 @@
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -220,5 +251,8 @@
         private System.Windows.Forms.ToolStripMenuItem kỹSưToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem nhânViênToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem côngNhânToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem bộPhậnToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem phòngBanToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem nhómToolStripMenuItem;
     }
 }

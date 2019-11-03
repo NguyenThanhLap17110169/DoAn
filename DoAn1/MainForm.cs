@@ -20,9 +20,6 @@ namespace DoAn1
         }
         private void HệThốngSảnXuấtToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            HeThongSanXuatForm ht = new HeThongSanXuatForm();
-            // ht.getdata();
-            ht.ShowDialog();
         }
 
         private void ThoátToolStripMenuItem_Click(object sender, EventArgs e)
@@ -78,6 +75,24 @@ namespace DoAn1
             cn.getdata();
             cn.Refresh1();
             cn.ShowDialog();
+        }
+
+        private void bộPhậnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            BoPhanForm bp = new BoPhanForm();
+            bp.ShowDialog();
+        }
+
+        private void phòngBanToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            PhongBanForm pb = new PhongBanForm();
+            pb.ShowDialog();
+        }
+
+        private void nhómToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            NhomForm n = new NhomForm();
+            n.ShowDialog();
         }
     }
 }

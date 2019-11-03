@@ -48,7 +48,7 @@ namespace DoAn1
 
             Microsoft.Office.Interop.Excel.Range cl3 = sheet.get_Range("C3", "C3");
             cl3.Value2 = "Ngày tháng năm sinh";
-            cl3.NumberFormat.Date = "m/d/yyyy";
+            cl3.NumberFormat = "m/d/yyyy";
             cl3.ColumnWidth = 25.5;
 
             Microsoft.Office.Interop.Excel.Range cl4 = sheet.get_Range("D3", "D3");
