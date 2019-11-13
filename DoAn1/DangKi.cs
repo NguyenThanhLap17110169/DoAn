@@ -31,5 +31,24 @@ namespace DoAn1
                 return false;
             }
         }
+        public bool deleteTaiKhoan(string ma)
+        {
+            MyDB mydb = new MyDB();
+            SqlCommand cmd = new SqlCommand("DELETE FROM LogIn WHERE TaiKhoan = @ma ", mydb.getConnection);
+            cmd.Parameters.Add("@ma", SqlDbType.NVarChar).Value = ma;
+            mydb.openConnection();
+            if ((cmd.ExecuteNonQuery() == 1))
+            {
+                cmd.Dispose();
+                mydb.closeConnection();
+                return true;
+            }
+            else
+            {
+                cmd.Dispose();
+                mydb.closeConnection();
+                return false;
+            }
+        }
     }
 }

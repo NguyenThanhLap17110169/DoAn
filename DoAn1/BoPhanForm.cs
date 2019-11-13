@@ -64,13 +64,31 @@ namespace DoAn1
             else
                 return true;
         }
+        bool kiemtraBoPhan1(string ten)
+        {
+            MyDB mydb = new MyDB();
+            SqlCommand cmd = new SqlCommand("SELECT * FROM BoPhan WHERE TenBoPhan = @ten", mydb.getConnection);
+            cmd.Parameters.Add("@ten", SqlDbType.NVarChar).Value = ten;
+            string str = "SELECT  count (TenBoPhan)  FROM BoPhan WHERE TenBoPhan = N'" + ten + "' ";
+            SqlCommand cmd1 = new SqlCommand(str, mydb.getConnection);
+
+            mydb.openConnection();
+            int n = (int)cmd1.ExecuteScalar();
+            mydb.closeConnection();
+            if (n >= 1)
+            {
+                return false;
+            }
+            else
+                return true;
+        }
         private void ButtonThem_Click(object sender, EventArgs e)
         {
             BoPhan bophan = new BoPhan();
             string ma = txtMa.Text;
             string ten = txtTen.Text;
            
-                if (verif()&&kiemtraBoPhan(ma))
+                if (verif()&& kiemtraBoPhan(ma) && kiemtraBoPhan1(ten))
                 {
                     if (bophan.insertBoPhan(ma, ten))
                         MessageBox.Show("New Bộ Phận Added", "Add Bộ Phận", MessageBoxButtons.OK, MessageBoxIcon.Information);

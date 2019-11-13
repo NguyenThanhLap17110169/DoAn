@@ -66,13 +66,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BoPhan.cs" />
-    <Compile Include="CongNhan.cs" />
-    <Compile Include="CongNhanForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CongNhanForm.Designer.cs">
-      <DependentUpon>CongNhanForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="DangKi.cs" />
     <Compile Include="DangKiForm.cs">
       <SubType>Form</SubType>
@@ -80,22 +73,12 @@
     <Compile Include="DangKiForm.Designer.cs">
       <DependentUpon>DangKiForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="ExcelCN.cs" />
-    <Compile Include="ExcelKySu.cs" />
-    <Compile Include="ExcelLuong.cs" />
-    <Compile Include="ExcelNV.cs" />
+    <Compile Include="ExcelNguoiLaoDong.cs" />
     <Compile Include="BoPhanForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="BoPhanForm.Designer.cs">
       <DependentUpon>BoPhanForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="KySu.cs" />
-    <Compile Include="KySuForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="KySuForm.Designer.cs">
-      <DependentUpon>KySuForm.cs</DependentUpon>
     </Compile>
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
@@ -110,12 +93,12 @@
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
     <Compile Include="MyDB.cs" />
-    <Compile Include="NhanVien.cs" />
-    <Compile Include="NhanVienForm.cs">
+    <Compile Include="NguoiLaoDong.cs" />
+    <Compile Include="NguoiLaoDongForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="NhanVienForm.Designer.cs">
-      <DependentUpon>NhanVienForm.cs</DependentUpon>
+    <Compile Include="NguoiLaoDongForm.Designer.cs">
+      <DependentUpon>NguoiLaoDongForm.cs</DependentUpon>
     </Compile>
     <Compile Include="NhomForm.cs">
       <SubType>Form</SubType>
@@ -139,17 +122,11 @@
     </Compile>
     <Compile Include="Nhom.cs" />
     <Compile Include="StaticValue.cs" />
-    <EmbeddedResource Include="CongNhanForm.resx">
-      <DependentUpon>CongNhanForm.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="DangKiForm.resx">
       <DependentUpon>DangKiForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BoPhanForm.resx">
       <DependentUpon>BoPhanForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="KySuForm.resx">
-      <DependentUpon>KySuForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
@@ -157,8 +134,8 @@
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="NhanVienForm.resx">
-      <DependentUpon>NhanVienForm.cs</DependentUpon>
+    <EmbeddedResource Include="NguoiLaoDongForm.resx">
+      <DependentUpon>NguoiLaoDongForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NhomForm.resx">
       <DependentUpon>NhomForm.cs</DependentUpon>

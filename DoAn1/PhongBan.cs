@@ -73,5 +73,14 @@ namespace DoAn1
                 return false;
             }
         }
+        public DataTable getPhongBan(SqlCommand command)
+        {
+            DataTable table = new DataTable();
+            table.Columns.Add("MaPhongBan", typeof(string));
+            table.Columns.Add("TenPhongBan", typeof(string));
+            table.Columns.Add("TenBoPhan", typeof(DateTime));
+            table.Load(command.ExecuteReader());
+            return table;
+        }
     }
 }

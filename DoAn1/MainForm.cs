@@ -37,7 +37,7 @@ namespace DoAn1
             MyDB mydb = new MyDB();
             SqlDataAdapter adapter = new SqlDataAdapter();
             DataTable table = new DataTable();
-            SqlCommand command = new SqlCommand("Select * FROM KySu where MaKS=@id", mydb.getConnection);
+            SqlCommand command = new SqlCommand("Select * FROM NguoiLaoDong where MaNLD=@id", mydb.getConnection);
             command.Parameters.Add("@id", SqlDbType.VarChar).Value = StaticValue.ID;
             adapter.SelectCommand = command;
             adapter.Fill(table);
@@ -52,31 +52,7 @@ namespace DoAn1
 
         }
 
-        private void KỹSưToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-
-            KySuForm ks = new KySuForm();
-            ks.getdata();
-            ks.Refresh1();
-            ks.ShowDialog();
-        }
-
-        private void NhânViênToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-            NhanVienForm nv = new NhanVienForm();
-            nv.getdata();
-            nv.Refresh1();
-            nv.ShowDialog();
-        }
-
-        private void CôngNhânToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-            CongNhanForm cn = new CongNhanForm();
-            cn.getdata();
-            cn.Refresh1();
-            cn.ShowDialog();
-        }
-
+ 
         private void bộPhậnToolStripMenuItem_Click(object sender, EventArgs e)
         {
             BoPhanForm bp = new BoPhanForm();
@@ -93,6 +69,12 @@ namespace DoAn1
         {
             NhomForm n = new NhomForm();
             n.ShowDialog();
+        }
+
+        private void kỹSưToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            NguoiLaoDongForm ks = new NguoiLaoDongForm();
+            ks.ShowDialog();
         }
     }
 }

@@ -17,17 +17,7 @@ namespace DoAn1
         {
             InitializeComponent();
         }
-        //public DataTable checkLog(string user, string pass)
-        //{
-        //    MyDB mydb = new MyDB();
-        //    SqlCommand command = new SqlCommand(" select * from LogIn, KySu where LogIn.TaiKhoan=KySu.MaKS and KySu.ChucVu='QuanLy'  ;", mydb.getConnection);
-        //  //  string sql = "Select * From DangNhap where NguoiDung='" + user + "' and Pass='" + pass + "'";
-        //    SqlDataAdapter sda = new SqlDataAdapter();
-        //    sda.SelectCommand = command;
-        //    DataTable dbdataset = new DataTable();
-        //    sda.Fill(dbdataset);
-        //    return dbdataset;
-        //}
+   
         private void ButtonLOGIN_Click(object sender, EventArgs e)
         {
             StaticValue.ID = txtTaiKhoan.Text;
@@ -35,10 +25,9 @@ namespace DoAn1
             con.openConnection();
             string tk = txtTaiKhoan.Text;
             string mk = txtPassword.Text;
-            string sql = "select * from LogIn, KySu where LogIn.TaiKhoan='" + tk + "' and LogIn.MatKhau= '" + mk + "' and LogIn.TaiKhoan=KySu.MaKS and KySu.ChucVu = N'Quản Lý'";
+            string sql = "select * from LogIn, NguoiLaoDong where LogIn.TaiKhoan='" + tk + "' and LogIn.MatKhau= '" + mk + "' and LogIn.TaiKhoan=NguoiLaoDong.MaNLD and NguoiLaoDong.ChucVu = N'Quản Lý'";
             SqlCommand cmd = new SqlCommand(sql, con.getConnection);
             SqlDataReader dta = cmd.ExecuteReader();
-
 
             if (dta.Read() == true)
             {

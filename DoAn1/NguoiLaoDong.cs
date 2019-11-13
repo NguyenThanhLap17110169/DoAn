@@ -9,14 +9,14 @@ using System.Data.SqlClient;
 
 namespace DoAn1
 {
-    class CongNhan
+    class NguoiLaoDong
     {
-        public bool insertCongNhan(string macn, string hoten, DateTime ngaysinh, string gioitinh, string diachi,string sđt, string trinhdo, string chucvu, string bac, string to, MemoryStream hinhanh)
+        public bool insertNguoiLaoDong(string manld, string hoten, DateTime ngaysinh, string gioitinh, string diachi, string sđt, string trinhdo, string chucvu, string chuyenmon, string donvitructhuoc, MemoryStream hinhanh)
         {
             MyDB mydb = new MyDB();
-            SqlCommand command = new SqlCommand("INSERT INTO CongNhan (MaCN, HoTen, NgaySinh, GioiTinh, DiaChi, SĐT, TrinhDo, ChucVu, Bac, Nhom , HinhAnh) " +
-                "VALUES (@ma, @ht, @ns, @gt, @dc, @dt, @td, @cv, @b,@t,@ha)", mydb.getConnection);
-            command.Parameters.Add("@ma", SqlDbType.NVarChar).Value = macn;
+            SqlCommand command = new SqlCommand("INSERT INTO NguoiLaoDong (MaNLD, HoTen, NgaySinh, GioiTinh, DiaChi, SĐT, TrinhDo, ChucVu, ChuyenMon, DonViTrucThuoc , HinhAnh) " +
+                "VALUES (@ma, @ht, @ns, @gt, @dc, @dt, @td, @cv, @cm,@dvtt,@ha)", mydb.getConnection);
+            command.Parameters.Add("@ma", SqlDbType.NVarChar).Value = manld;
             command.Parameters.Add("@ht", SqlDbType.NVarChar).Value = hoten;
             command.Parameters.Add("@ns", SqlDbType.DateTime).Value = ngaysinh;
             command.Parameters.Add("@gt", SqlDbType.NVarChar).Value = gioitinh;
@@ -24,8 +24,8 @@ namespace DoAn1
             command.Parameters.Add("@dt", SqlDbType.NVarChar).Value = sđt;
             command.Parameters.Add("@td", SqlDbType.NVarChar).Value = trinhdo;
             command.Parameters.Add("@cv", SqlDbType.NVarChar).Value = chucvu;
-            command.Parameters.Add("@b", SqlDbType.NVarChar).Value = bac;
-            command.Parameters.Add("@t", SqlDbType.NVarChar).Value = to;
+            command.Parameters.Add("@cm", SqlDbType.NVarChar).Value = chuyenmon;
+            command.Parameters.Add("@dvtt", SqlDbType.NVarChar).Value = donvitructhuoc;
             command.Parameters.Add("@ha", SqlDbType.Image).Value = hinhanh.ToArray();
 
             mydb.openConnection();
@@ -41,10 +41,10 @@ namespace DoAn1
                 return false;
             }
         }
-        public bool deleteCongNhan(string ma)
+        public bool deleteNguoiLaoDong(string ma)
         {
             MyDB mydb = new MyDB();
-            SqlCommand cmd = new SqlCommand("DELETE FROM CongNhan WHERE MaCN = @ma ", mydb.getConnection);
+            SqlCommand cmd = new SqlCommand("DELETE FROM NguoiLaoDong WHERE MaNLD = @ma ", mydb.getConnection);
             cmd.Parameters.Add("@ma", SqlDbType.NVarChar).Value = ma;
             mydb.openConnection();
             if ((cmd.ExecuteNonQuery() == 1))
@@ -60,11 +60,11 @@ namespace DoAn1
                 return false;
             }
         }
-        public bool UpdateCongNhan(string macn, string hoten, DateTime ngaysinh, string gioitinh, string diachi, string sđt, string trinhdo, string chucvu, string bac, string to, MemoryStream hinhanh)
+        public bool UpdateNguoiLaoDong(string manld, string hoten, DateTime ngaysinh, string gioitinh, string diachi, string sđt, string trinhdo, string chucvu, string chuyenmon, string donvitructhuoc, MemoryStream hinhanh)
         {
             MyDB mydb = new MyDB();
-            SqlCommand command = new SqlCommand("UPDATE CongNhan SET MaCN=@ma,HoTen=@ht,NgaySinh=@ns,GioiTinh=@gt,DiaChi=@dc,SĐT=@dt,TrinhDo=@td,ChucVu=@cv,Bac=@b,Nhom=@t,HinhAnh=@ha WHERE MaCN=@ma", mydb.getConnection);
-            command.Parameters.Add("@ma", SqlDbType.NVarChar).Value = macn;
+            SqlCommand command = new SqlCommand("UPDATE NguoiLaoDong SET MaNLD=@ma,HoTen=@ht,NgaySinh=@ns,GioiTinh=@gt,DiaChi=@dc,SĐT=@dt,TrinhDo=@td,ChucVu=@cv,ChuyenMon=@cm,DonViTrucThuoc=@dvtt,HinhAnh=@ha WHERE MaNLD=@ma", mydb.getConnection);
+            command.Parameters.Add("@ma", SqlDbType.NVarChar).Value = manld;
             command.Parameters.Add("@ht", SqlDbType.NVarChar).Value = hoten;
             command.Parameters.Add("@ns", SqlDbType.DateTime).Value = ngaysinh;
             command.Parameters.Add("@gt", SqlDbType.NVarChar).Value = gioitinh;
@@ -72,8 +72,8 @@ namespace DoAn1
             command.Parameters.Add("@dt", SqlDbType.NVarChar).Value = sđt;
             command.Parameters.Add("@td", SqlDbType.NVarChar).Value = trinhdo;
             command.Parameters.Add("@cv", SqlDbType.NVarChar).Value = chucvu;
-            command.Parameters.Add("@b", SqlDbType.NVarChar).Value = bac;
-            command.Parameters.Add("@t", SqlDbType.NVarChar).Value = to;
+            command.Parameters.Add("@cm", SqlDbType.NVarChar).Value = chuyenmon;
+            command.Parameters.Add("@dvtt", SqlDbType.NVarChar).Value = donvitructhuoc;
             command.Parameters.Add("@ha", SqlDbType.Image).Value = hinhanh.ToArray();
 
             mydb.openConnection();

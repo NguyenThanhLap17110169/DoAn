@@ -1,12 +1,9 @@
 F:\DoAn1\DoAn1\DoAn1\bin\Debug\DoAn1.exe.config
 F:\DoAn1\DoAn1\DoAn1\bin\Debug\DoAn1.exe
 F:\DoAn1\DoAn1\DoAn1\bin\Debug\DoAn1.pdb
-F:\DoAn1\DoAn1\DoAn1\obj\Debug\DoAn1.CongNhanForm.resources
 F:\DoAn1\DoAn1\DoAn1\obj\Debug\DoAn1.DangKiForm.resources
-F:\DoAn1\DoAn1\DoAn1\obj\Debug\DoAn1.KySuForm.resources
 F:\DoAn1\DoAn1\DoAn1\obj\Debug\DoAn1.LoginForm.resources
 F:\DoAn1\DoAn1\DoAn1\obj\Debug\DoAn1.MainForm.resources
-F:\DoAn1\DoAn1\DoAn1\obj\Debug\DoAn1.NhanVienForm.resources
 F:\DoAn1\DoAn1\DoAn1\obj\Debug\DoAn1.Properties.Resources.resources
 F:\DoAn1\DoAn1\DoAn1\obj\Debug\DoAn1.csproj.GenerateResource.cache
 F:\DoAn1\DoAn1\DoAn1\obj\Debug\DoAn1.exe
@@ -15,3 +12,4 @@ F:\DoAn1\DoAn1\DoAn1\obj\Debug\DoAn1.csprojAssemblyReference.cache
 F:\DoAn1\DoAn1\DoAn1\obj\Debug\DoAn1.BoPhanForm.resources
 F:\DoAn1\DoAn1\DoAn1\obj\Debug\DoAn1.PhongBanForm.resources
 F:\DoAn1\DoAn1\DoAn1\obj\Debug\DoAn1.NhomForm.resources
+F:\DoAn1\DoAn1\DoAn1\obj\Debug\DoAn1.NguoiLaoDongForm.resources

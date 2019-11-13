@@ -101,14 +101,31 @@ namespace DoAn1
         {
 
         }
+        bool kiemtraBoPhan1(string ten)
+        {
+            MyDB mydb = new MyDB();
+            SqlCommand cmd = new SqlCommand("SELECT * FROM PhongBan WHERE TenPhongBan = @ten", mydb.getConnection);
+            cmd.Parameters.Add("@ten", SqlDbType.NVarChar).Value = ten;
+            string str = "SELECT  count (TenPhongBan)  FROM PhongBan WHERE TenPhongBan = N'" + ten + "' ";
+            SqlCommand cmd1 = new SqlCommand(str, mydb.getConnection);
 
+            mydb.openConnection();
+            int n = (int)cmd1.ExecuteScalar();
+            mydb.closeConnection();
+            if (n >= 1)
+            {
+                return false;
+            }
+            else
+                return true;
+        }
         private void buttonThem_Click(object sender, EventArgs e)
         {
             PhongBan phongban = new PhongBan();
             string ma = txtMa.Text;
             string tenpb = txtTen.Text;
             string tenbp = ComboBoxBoPhan.Text;
-            if (verif() && kiemtraPhongBan(ma))
+            if (verif() && kiemtraPhongBan(ma) && kiemtraBoPhan1(tenpb))
             {
                 if (phongban.insertPhongBan(ma, tenpb,tenbp))
                     MessageBox.Show("New Phòng Ban Added", "Add Phòng Ban", MessageBoxButtons.OK, MessageBoxIcon.Information);

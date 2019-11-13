@@ -20,9 +20,27 @@ namespace DoAn1
         bool kiemtraTaiKhoan(string ma)
         {
             MyDB mydb = new MyDB();
-            SqlCommand cmd = new SqlCommand("SELECT * FROM KySu WHERE MaKS = @ma ", mydb.getConnection);
+            SqlCommand cmd = new SqlCommand("SELECT * FROM NguoiLaoDong WHERE MaNLD = @ma ", mydb.getConnection);
             cmd.Parameters.Add("@ma", SqlDbType.NVarChar).Value = ma;
-            string str = "SELECT  count (MaKS)  FROM KySu WHERE MaKS = '" + ma + "' ";
+            string str = "SELECT  count (MaNLD)  FROM NguoiLaoDong WHERE MaNLD = '" + ma + "' ";
+            SqlCommand cmd1 = new SqlCommand(str, mydb.getConnection);
+
+            mydb.openConnection();
+            int n = (int)cmd1.ExecuteScalar();
+            mydb.closeConnection();
+            if (n >= 1)
+            {
+                return false;
+            }
+            else
+                return true;
+        }
+        bool kiemtra(string ma)
+        {
+            MyDB mydb = new MyDB();
+            SqlCommand cmd = new SqlCommand("SELECT * FROM LogIn WHERE TaiKhoan = @ma ", mydb.getConnection);
+            cmd.Parameters.Add("@ma", SqlDbType.NVarChar).Value = ma;
+            string str = "SELECT  count (TaiKhoan)  FROM LogIn WHERE TaiKhoan = '" + ma + "' ";
             SqlCommand cmd1 = new SqlCommand(str, mydb.getConnection);
 
             mydb.openConnection();
@@ -38,10 +56,10 @@ namespace DoAn1
         private void ButtonAdd_Click(object sender, EventArgs e)
         {
             DangKi dk = new DangKi();
-            
-            if (verif() )
+            string tk = txtTaiKhoan.Text;
+            if (verif() && kiemtra(tk))
             {
-                string tk = txtTaiKhoan.Text;
+               
                 string mk1 = txtMatKhau1.Text;
                 string mk2 = txtMatKhau2.Text;
                 if (kiemtraTaiKhoan(tk) == false)

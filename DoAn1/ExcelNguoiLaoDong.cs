@@ -6,7 +6,7 @@ using System.Data;
 
 namespace DoAn1
 {
-    class ExcelNV
+    class ExcelNguoiLaoDong
     {
         public void ExportExcel(DataTable dt, string SheetName, string title)
         {
@@ -28,7 +28,7 @@ namespace DoAn1
             sheet = (Microsoft.Office.Interop.Excel.Worksheet)oSheets.get_Item(1);
             sheet.Name = SheetName;
             //tạo phần đầu nếu muốn
-            Microsoft.Office.Interop.Excel.Range head = sheet.get_Range("A1", "K1");
+            Microsoft.Office.Interop.Excel.Range head = sheet.get_Range("A1", "J1");
             head.MergeCells = true;
             head.Value2 = title;
             head.Font.Bold = true;
@@ -39,11 +39,11 @@ namespace DoAn1
             head.HorizontalAlignment = Microsoft.Office.Interop.Excel.XlHAlign.xlHAlignCenter;
             //Tạo tiêu đề cột
             Microsoft.Office.Interop.Excel.Range cl1 = sheet.get_Range("A3", "A3");
-            cl1.Value2 = "Mã nhân viên";
+            cl1.Value2 = "Mã Người lao động";
             cl1.ColumnWidth = 18.5;
 
             Microsoft.Office.Interop.Excel.Range cl2 = sheet.get_Range("B3", "B3");
-            cl2.Value2 = "Họ tên nhân viên";
+            cl2.Value2 = "Họ tên người lao động";
             cl2.ColumnWidth = 25.5;
 
             Microsoft.Office.Interop.Excel.Range cl3 = sheet.get_Range("C3", "C3");
@@ -72,20 +72,16 @@ namespace DoAn1
             cl8.ColumnWidth = 23.0;
 
             Microsoft.Office.Interop.Excel.Range cl9 = sheet.get_Range("I3", "I3");
-            cl9.Value2 = "Công việc";
+            cl9.Value2 = "Chuyên môn";
             cl9.ColumnWidth = 38.5;
 
             Microsoft.Office.Interop.Excel.Range cl10 = sheet.get_Range("J3", "J3");
-            cl10.Value2 = "Phòng ban";
-            cl10.ColumnWidth = 24.0;
-
-            Microsoft.Office.Interop.Excel.Range cl11 = sheet.get_Range("K3", "K3");
-            cl11.Value2 = "Hình ảnh";
-            cl11.ColumnWidth = 20.5;
+            cl10.Value2 = "Đơn vị trực thuộc";
+            cl10.ColumnWidth = 30.0;
 
 
 
-            Microsoft.Office.Interop.Excel.Range rowHead = sheet.get_Range("A3", "K3");
+            Microsoft.Office.Interop.Excel.Range rowHead = sheet.get_Range("A3", "J3");
             rowHead.Font.Bold = true;
             //kẻ viền
             rowHead.Borders.LineStyle = Microsoft.Office.Interop.Excel.Constants.xlSolid;
